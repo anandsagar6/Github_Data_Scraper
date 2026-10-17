@@ -1,0 +1,322 @@
+===============================================================================
+PROMPT STARTS HERE
+===============================================================================
+
+Create (or update, if one already exists) a `reset.sh` script for this project.
+
+----------------------------------------
+1. WHY I WANT THIS - THE GOAL
+----------------------------------------
+
+When I run this project, it starts producing files: its output/result files,
+numbered cycle or batch files, progress and checkpoint state, caches, logs and
+temporary files. Once those exist, the project is no longer at its starting
+point - it resumes from where it left off instead of beginning fresh.
+
+I want one command that puts the project back to a clean first-run state:
+
+      ./reset.sh
+
+After it runs, the next launch must begin from the very beginning, exactly as if
+the project had just been set up for the first time on this machine - using the
+project's own initialization logic, not values the reset script invents.
+
+So the script has exactly two jobs:
+
+  (A) DELETE every file the project creates after it starts running - output,
+      cycle/batch files, progress position, checkpoints, counters, caches, logs,
+      locks and temp files. Nothing that represents "work already done" may
+      survive.
+
+  (B) PRESERVE absolutely everything needed to run the project. Not one
+      necessary file or folder may be touched. Source code, modules, helper
+      scripts, configuration, input/seed/lookup data, dependency manifests,
+      tests, documentation, the installed environment - and every credential or
+      secret file - must all still be there and unchanged afterwards.
+
+If you are ever unsure about a file, apply this test:
+
+      "If I delete this file, will the project recreate or re-initialize it
+       automatically on the next run?"
+
+  - YES, it comes back by itself -> it is runtime state. Safe to delete.
+  - NO, or it is an input the project only reads -> PRESERVE IT. Never delete.
+
+When you genuinely cannot tell, DO NOT DELETE IT. Preserve it, and tell me about
+it in your summary so I can decide. Leaving one stale file behind is a minor
+annoyance I can fix in a second; deleting one required file breaks the project.
+Never guess in the direction of deleting.
+
+----------------------------------------
+2. NON-NEGOTIABLE SAFETY RULES
+----------------------------------------
+
+This script deletes files, so it must be conservative by construction - not
+merely careful in the common case.
+
+RULE 1 - Delete only from a hardcoded allowlist of exact filenames.
+  The script must contain an explicit, literal list of the names it may remove,
+  derived from this project's source. It must NEVER:
+      - accept a path, pattern or directory from the command line and delete it
+      - use `rm -rf` on a directory, or any recursive delete
+      - use a broad glob such as `rm *.json`, `rm *.xlsx`, `rm -f *`
+      - delete anything by extension alone
+      - use `find ... -delete` or `find ... -exec rm`
+  A wildcard is acceptable ONLY for a genuine family of runtime files whose
+  names the project builds at runtime - numbered cycle/batch outputs,
+  timestamped logs, sidecar lock/temp files. Even then, match the name against a
+  strict pattern (for example a digits-only suffix) and skip anything that does
+  not match, rather than deleting whatever the glob happened to catch.
+
+RULE 2 - NEVER delete credentials, secrets, or configuration.
+  Credential files, API keys, tokens, cookie/session login files, service
+  accounts and config files are required to run this project and are
+  intentionally kept here. They must never appear in the deletion list, not even
+  behind a flag. If the project writes a *refreshed* token or cached session
+  that it can re-obtain by itself, treat that as a judgment call under part 4 -
+  do not delete it by default, and ask me.
+
+RULE 3 - NEVER delete source, inputs, tests, docs, or the environment.
+  That includes the dependency/environment directory (venv/, .venv/,
+  node_modules/, etc.) and dependency manifests. Deleting the environment would
+  stop the project from running, which violates goal (B). Compiled bytecode
+  caches are also not "work already done" - leave them alone. A reset clears the
+  project's DATA and PROGRESS, never its INSTALLATION.
+
+RULE 4 - Verify this is the right project before deleting anything.
+  The script must confirm it is sitting in the intended project root and refuse
+  to run otherwise. Check that a few known required files exist, AND check a
+  content signature inside the main source file (grep for a distinctive constant
+  or string that identifies this project). A name check alone is not enough - a
+  same-named file in an unrelated directory must not be accepted.
+
+RULE 5 - Resolve the project root from the script's own location, never from the
+  caller's working directory. Follow symlinks to the script itself. The script
+  must behave identically whether invoked as `./reset.sh`, by absolute path, or
+  through a symlink from elsewhere. Every deletion path must be built from that
+  resolved root, never from a relative path.
+
+RULE 6 - Refuse to run while the project is running.
+  Deleting state out from under a live run can corrupt output or produce
+  inconsistent progress. Detect whether this project's own main program is
+  currently executing, and if it is, delete nothing and exit with a clear
+  message. Scope the detection to THIS project - another copy of the same
+  program running from a different directory must not block us. If you cannot
+  determine the answer with confidence, FAIL CLOSED: treat it as running,
+  delete nothing, and say why.
+
+RULE 7 - Confirm before deleting, and support a no-op preview.
+  Provide `--dry-run`, which prints exactly what would be removed and changes
+  nothing. Without it, show the full plan and require me to type a specific
+  confirmation word (not just "y") before anything is deleted. Any other input
+  cancels with nothing deleted.
+
+RULE 8 - Containment checks on every single candidate, immediately before
+  deletion. For each one: it must be a regular file (not a directory, not a
+  device, not a socket); it must NOT be a symbolic link; its parent directory,
+  fully resolved, must be exactly the verified project root; and its name must
+  come from the allowlist and contain no path separator. Refuse and report
+  anything that fails, instead of deleting it. These checks are what guarantee
+  the cleanup can never follow a link out of the project.
+
+----------------------------------------
+3. HOW TO FIND OUT WHAT TO DELETE - INVESTIGATE, DO NOT GUESS
+----------------------------------------
+
+Do not write a generic cleanup script from memory. Derive the list from this
+project's actual code:
+
+  a) List the project tree, including dotfiles.
+
+  b) Find every path the project WRITES, and the constants that hold those
+     filenames. Search for:
+        - module-level filename constants (UPPER_CASE = "something.json")
+        - every quoted string ending in a data/output extension
+          (.xlsx .csv .json .jsonl .txt .log .db .sqlite .pkl .parquet .html
+           .png .zip .tmp .lock .bak .part)
+        - write calls: open(..., "w"/"a"/"x"), to_excel, to_csv, to_json,
+          json.dump, writer/Workbook/save, write_text, pickle.dump, savefig,
+          os.replace, tempfile.mkstemp/NamedTemporaryFile, logging FileHandler,
+          sqlite3.connect
+        - filenames built dynamically with f-strings or concatenation - these
+          reveal the numbered/timestamped families from RULE 1
+        - sidecar files derived from another path (e.g. `path + ".lock"`,
+          mkstemp with a `.tmp` suffix in the same directory)
+
+  c) For each file found, confirm in the source that the project recreates or
+     re-initializes it when missing. Only such files are eligible for deletion.
+     Quote or reference the code that proves it. If a file is written but NOT
+     automatically recreated, preserve it and raise it with me.
+
+  d) Find every path the project only READS. These are inputs - they must be
+     preserved. Read-only paths are the most dangerous thing to delete by
+     mistake.
+
+  e) If the project has a `.gitignore`, read it and cross-check. The set of
+     files this reset script deletes should line up closely with the
+     script-generated files that .gitignore ignores - excluding the
+     environment/bytecode directories, which .gitignore ignores but reset must
+     NOT delete. Report any discrepancy in either direction: a file ignored by
+     git but not reset, or reset but not ignored, usually means one of the two
+     is out of date.
+
+  f) If a reset/cleanup script already exists, read it fully before changing
+     anything. Update it rather than replacing it wholesale: keep its existing
+     structure, flag names and default behaviour, add newly introduced runtime
+     files, and drop entries the project no longer creates. Do NOT silently
+     flip an established default (for example, changing a cache from
+     preserved-by-default to deleted-by-default) - if you think a default is
+     wrong, tell me and let me decide. List every change you made and why.
+
+----------------------------------------
+4. CLASSIFY WHAT YOU FOUND INTO THREE TIERS
+----------------------------------------
+
+  TIER 1 - DELETE BY DEFAULT (regenerable runtime state)
+    - the primary output/result file the project is actively writing
+    - completed cycle / batch / numbered / timestamped output files
+    - progress, checkpoint, resume-position and counter state
+    - run reports the project regenerates
+    - sidecar lock files and leftover atomic-write temp files
+    - logs, unless part of the audit concern below
+    Skip any category this project does not have.
+
+  TIER 2 - JUDGMENT CALL (regenerable, but deleting it has a real cost or
+  changes behaviour). Do not decide these silently. Put each behind an explicit
+  opt-in or opt-out flag, document the consequence in the script's own comments
+  and in its output, AND raise it with me in your summary. Typical examples:
+    - a large derived cache: deleting it is functionally safe but forces the
+      project to re-fetch or recompute everything, which can be slow or costly
+    - append-only error/evidence logs kept for diagnosis or audit
+    - pacing, scheduling or rate-limit state: wiping it mid-interval can make
+      the project resume activity earlier than intended
+    - a block/stop marker the project writes to halt itself after a failure or
+      a refusal from an external service, which an operator is meant to clear
+      deliberately
+    - any refreshed token or cached session (see RULE 2)
+    My default intent is a genuinely fresh start, so lean toward deleting
+    Tier 2 items - but only with the flag, the warning, and my awareness.
+
+  TIER 3 - NEVER TOUCH
+    - all source, modules, helper and maintenance scripts, tests, docs
+    - configuration, input/seed/lookup data, templates
+    - every credential and secret file
+    - dependency manifests, the environment directory, bytecode caches
+    - anything you could not positively confirm is regenerable
+
+----------------------------------------
+5. HOW THE SCRIPT MUST BEHAVE
+----------------------------------------
+
+Command line (keep it tiny - no free-form path arguments, ever):
+    ./reset.sh                  plan, confirm, then reset
+    ./reset.sh --dry-run        show what would be removed, change nothing
+    ./reset.sh --help           usage
+    plus one explicit flag per Tier 2 item, named for what it does
+  Reject any unknown option with a clear error instead of ignoring it.
+
+Execution order - never delete before every check has passed:
+    1. parse options
+    2. resolve the project root from the script's own location (RULE 5)
+    3. verify project identity (RULE 4)
+    4. check whether the project is running; refuse if it is or if unsure
+       (RULE 6)
+    5. build the candidate list, applying containment checks (RULE 8)
+    6. print the plan: what will be removed, and what was excluded WITH THE
+       REASON for each exclusion, so I can see nothing was dropped silently
+    7. exit here if --dry-run
+    8. require typed confirmation (RULE 7)
+    9. delete, counting successes and failures
+   10. print an accurate summary and exit with a meaningful code
+
+Other required behaviour:
+  - Idempotent: running it twice must be harmless. A file that is already gone
+    is not an error and not a warning.
+  - Nothing to do: if no runtime files exist, say so plainly and exit 0 without
+    prompting me.
+  - Partial failure: if a file cannot be removed (permissions, for example),
+    report that specific file, keep going with the rest, and exit non-zero with
+    a count of what succeeded and what failed. Never claim success after a
+    failure.
+  - Interruption: trap INT/TERM and report honestly how many files were removed
+    before the interruption and that the reset is incomplete.
+  - Summarize long lists. If there are many numbered cycle/batch files, print a
+    range and a count rather than hundreds of lines, but still delete each one
+    individually by verified name.
+  - Finish by printing the exact commands to start the project again.
+  - Distinct exit codes for: success, cancelled by me, refused because the
+    project is running, and incomplete due to failures. Document them in the
+    header comment.
+
+----------------------------------------
+6. HOW TO WRITE THE SCRIPT
+----------------------------------------
+
+  - `#!/usr/bin/env bash` and `set -Eeuo pipefail`.
+  - Quote every expansion. Use `[[ ]]`, and `--` before filename operands so a
+    leading-dash name can never be read as an option.
+  - Keep the deletion allowlist in one clearly marked block near the top, with a
+    short comment on each entry: what creates it, what it holds, and why
+    removing it is safe. Reference the source constant the name comes from. That
+    block is the thing I will review when the project changes.
+  - Keep the Tier 2 and Tier 3 exclusions in their own named lists, each entry
+    paired with the reason shown to the operator.
+  - Open the file with a header comment stating the purpose, what it never
+    touches, the usage lines, and the exit codes.
+  - Prefer plain, readable bash over clever one-liners. I need to audit this.
+  - Make the file executable (chmod +x).
+  - Portability: if you use anything non-POSIX (/proc, readlink -f, realpath,
+    mapfile), either confirm it exists on the systems I use or handle its
+    absence by failing closed per RULE 6.
+
+----------------------------------------
+7. VERIFY IT - THIS STEP IS MANDATORY
+----------------------------------------
+
+Do not hand me an unverified destructive script. Prove it is safe:
+
+  - Build a disposable fixture project in a scratch/temp directory OUTSIDE my
+    real project. NEVER test by deleting files in my actual project, and never
+    create dummy runtime files inside it.
+  - Populate the fixture with BOTH sets: stand-ins for every real project file
+    (source, config, inputs, tests, a credential file, a fake environment
+    directory) and stand-ins for every runtime file the script should remove -
+    including the awkward cases: several numbered cycle/batch files, a lock
+    file, a leftover temp file, and each Tier 2 item.
+  - Then test at minimum:
+      1. --dry-run deletes nothing at all
+      2. a normal run with the confirmation word removes exactly the Tier 1 set
+      3. every real project file, credential and the environment directory are
+         still present and unchanged afterwards
+      4. a second run immediately after is a clean no-op (idempotent)
+      5. typing anything other than the confirmation word deletes nothing
+      6. each Tier 2 flag does what it claims, and its item survives without it
+      7. it refuses to run outside the project, and in a decoy directory that
+         merely has the same filenames but fails the content signature
+      8. a symlink or a directory placed at an allowlisted name is refused, not
+         followed or deleted
+      9. a wrongly-named lookalike in the numbered family (letters instead of
+         digits, or an extra suffix) is preserved, not deleted
+     10. it refuses when the project appears to be running
+  - Report the results of these checks. If the project already has tests for its
+    reset script, run those too. Fix anything that fails and re-test until all
+    checks pass.
+  - Delete the fixture directory when you are done.
+
+----------------------------------------
+8. WHAT TO TELL ME WHEN YOU ARE FINISHED
+----------------------------------------
+
+  - The three tiers as explicit lists: what gets deleted by default, what sits
+    behind a flag (and the consequence of each), and what is never touched.
+  - For each deletion entry, the evidence that the project recreates it.
+  - Every Tier 2 judgment call, your recommendation, and what you defaulted to.
+  - Any file the project writes that you chose to PRESERVE, and why.
+  - Any mismatch you found against .gitignore (part 3e).
+  - If updating an existing script: every rule, flag and default you changed.
+  - The results of the part 7 verification.
+  - Do not run the finished reset script against my real project unless I ask.
+
+===============================================================================
+PROMPT ENDS HERE
+===============================================================================

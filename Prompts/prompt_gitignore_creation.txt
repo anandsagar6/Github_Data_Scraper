@@ -1,0 +1,231 @@
+===============================================================================
+PROMPT STARTS HERE
+===============================================================================
+
+Create (or update, if one already exists) the .gitignore file for this project.
+
+----------------------------------------
+1. WHY I WANT THIS - THE GOAL
+----------------------------------------
+
+I clone and pull this project onto different systems, and then immediately run
+it. So the repository has exactly two jobs:
+
+  (A) A fresh `git clone` or a `git pull` MUST contain every single file and
+      folder needed to run the project correctly. Not one necessary file may be
+      missing. If something is required to start the script or to make it behave
+      the way I expect, it belongs in git - no exceptions.
+
+  (B) The repository must NOT carry any file that the script itself creates
+      after it starts running. When I clone on a new machine I want a clean
+      start, not another machine's leftover output, progress position, cache or
+      logs.
+
+Those two rules decide everything. If you are ever unsure about a file, apply
+this test:
+
+      "If this file is missing on a fresh clone, does the script fail,
+       refuse to start, or behave incorrectly?"
+
+  - YES, it breaks or misbehaves  -> the file MUST be tracked. Never ignore it.
+  - NO, the script recreates or re-initializes it automatically -> ignore it.
+
+When you genuinely cannot tell, DEFAULT TO TRACKING THE FILE. A redundant file
+in git is a minor annoyance; a missing required file breaks the project on every
+machine I clone to. Never guess in the direction of ignoring.
+
+----------------------------------------
+2. NON-NEGOTIABLE RULES
+----------------------------------------
+
+RULE 1 - NEVER ignore credentials or secrets.
+  Do NOT add the usual boilerplate secret patterns. Specifically, do NOT write
+  rules for things like:
+        .env / .env.*
+        *.pem / *.key / *.crt / id_rsa
+        credentials.json / client_secret*.json / service_account*.json
+        token.json / secrets.* / config.ini / settings.local.*
+        api_keys.* / auth.json
+  If this project needs a credential, API key, token, cookie file, service
+  account, login config or any other secret to run, that file MUST be committed
+  so it arrives with every clone and pull. This is an intentional decision for
+  this workflow - do not "helpfully" protect secrets here, and do not add such a
+  rule commented-out or as a suggestion. Leave them fully tracked and silent.
+
+RULE 2 - NEVER ignore anything required to run the project.
+  Source code, libraries and helper modules, configuration, data/seed/input
+  files the script reads, lookup or mapping tables, templates, dependency
+  manifests (requirements.txt, package.json, Pipfile, pyproject.toml, lock
+  files), helper and maintenance scripts, tests, and documentation all stay
+  tracked.
+
+RULE 3 - Use EXACT filenames, not broad extension globs.
+  Write `/current_data.xlsx`, never `*.xlsx`. Write `/progress_state.json`,
+  never `*.json`. Broad globs are the main way a required config or input file
+  gets silently left out of git months later when someone adds it. A pattern
+  with a wildcard is acceptable ONLY where the script generates a genuine family
+  of files whose names it builds at runtime - for example numbered cycle or
+  batch outputs (`/current_data_cycle*.xlsx`), timestamped logs, or sidecar
+  `*.lock` / `*.tmp` files. In that case keep the stem as specific as possible.
+
+RULE 4 - Ignore only files the script RE-CREATES automatically.
+  Before ignoring any file, confirm in the source that the script creates it, or
+  re-initializes it, when it is missing. If a file is written by the script but
+  the script would fail or lose something irreplaceable without it, treat it as
+  required and track it - and tell me about it in your summary.
+
+----------------------------------------
+3. HOW TO FIND OUT WHAT TO IGNORE - INVESTIGATE, DO NOT GUESS
+----------------------------------------
+
+Do not produce a generic template from memory. Derive the list from this
+project's actual code. Work through these steps:
+
+  a) List the project tree, including dotfiles, excluding dependency and
+     environment directories.
+
+  b) Find every path the code WRITES. Search the source for the write paths and
+     the constants that hold filenames - for example:
+        - module-level filename constants (UPPER_CASE = "something.json")
+        - every quoted string ending in a data/output extension
+          (.xlsx .csv .json .jsonl .txt .log .db .sqlite .pkl .parquet .html
+           .png .zip .tmp .lock .bak .part)
+        - write calls: open(..., "w"/"a"/"x"), to_excel, to_csv, to_json,
+          json.dump, writer/Workbook/save, write_text, pickle.dump, savefig,
+          shutil.copy, os.replace, tempfile.mkstemp/NamedTemporaryFile,
+          logging FileHandler, sqlite3.connect
+        - directories the script creates: os.makedirs / mkdir / Path.mkdir
+        - f-strings and string concatenation that build filenames dynamically
+          (these reveal the numbered/timestamped families from RULE 3)
+
+  c) Find every path the code READS but never writes. These are inputs the
+     project depends on - they MUST stay tracked. Read-only paths are the single
+     most dangerous thing to ignore by accident.
+
+  d) Look for an existing reset / cleanup / clear-state script in the project
+     (reset.sh, clean.py, clear_state.*, Makefile clean target). If one exists
+     it is the best available source of truth: whatever it deletes is by
+     definition regenerable runtime state, and whatever it deliberately refuses
+     to delete deserves a closer look. Read its comments - they usually explain
+     why each file is safe or unsafe to remove. Still verify its list against
+     the current source, since it can fall behind.
+
+  e) Check where the test suite writes its fixtures. If tests create files
+     inside the repository rather than in a system temp directory, account for
+     that; if they use temp directories, nothing is needed.
+
+  f) Determine the runtime/dependency directory actually used by this project
+     (venv/, .venv/, node_modules/, __pycache__/, target/, build/, vendor/) so
+     it can be ignored while its manifest stays tracked.
+
+  g) If a .gitignore already exists, read it first. Then update it rather than
+     blindly replacing it: keep what is still correct, add newly introduced
+     runtime files, and remove rules for files the script no longer creates.
+     Explicitly tell me every rule you added, changed or deleted and why. Also
+     re-audit the existing rules against RULE 1 and RULE 3 - if you find a
+     secret-file pattern or a broad extension glob already in there, flag it and
+     remove it.
+
+----------------------------------------
+4. CLASSIFY WHAT YOU FOUND
+----------------------------------------
+
+Sort every discovered path into IGNORE or TRACK, and group the IGNORE list into
+these categories (skip any category this project does not have):
+
+  IGNORE
+    1. Primary output / result files the script produces
+       (the "current data" file, the active working output)
+    2. Cycle / batch / rotated / numbered / timestamped output files
+       (completed chunks, per-run archives)
+    3. Progress, checkpoint, resume-position and counter state
+       (these are per-machine and must never travel between systems)
+    4. Caches and derived data the script can rebuild by re-fetching
+    5. Logs, error/evidence files, and run reports
+    6. Pacing, scheduling, rate-limit, authorization-block or session state
+    7. Sidecar lock files and atomic-write temp files
+    8. Dependency/environment directories and compiled bytecode
+    9. Editor and OS clutter, including the lock files office apps create next
+       to an open spreadsheet or document
+
+  TRACK (never ignore)
+    - all source, modules, helpers, tests, docs
+    - dependency manifests and lock files
+    - configuration and input/seed/lookup data the script reads
+    - every credential / secret / auth file needed to run (see RULE 1)
+
+----------------------------------------
+5. HOW TO WRITE THE FILE
+----------------------------------------
+
+  - Anchor root-level runtime files with a leading slash (`/state.json`) so the
+    rule cannot accidentally match a same-named file in a subdirectory.
+
+  - CRITICAL SYNTAX WARNING: git does NOT support trailing comments on a pattern
+    line. A `#` only begins a comment at the START of a line. Writing
+        /current_data.xlsx    # active output
+    makes git treat the whole thing - spaces, `#` and all - as a literal
+    pattern, so it silently matches nothing and the file gets committed anyway.
+    Put every comment on its own line, above the pattern it describes.
+
+  - Organize the file into clearly labelled sections matching the categories in
+    part 4, and comment each entry with what creates it and what it is for, so a
+    future reader can maintain it. Where useful, name the source constant or
+    variable the filename comes from.
+
+  - Open the file with a header block stating the purpose: that a clone must be
+    runnable, that only script-generated runtime files are ignored, that
+    credentials and secrets are intentionally tracked, and that exact filenames
+    are used on purpose. Include the quick-start commands for the project.
+
+  - End with a "safety net" section that explicitly re-includes the essential
+    files with `!` negations (`!/main_script.py`, `!/requirements.txt`,
+    `!/test/`, `!/test/**`, `!.gitignore`, and any credential/config file the
+    project needs). These are no-ops today; they exist so a careless broad rule
+    added later cannot drop a required file. Note that a `!` negation cannot
+    rescue a file whose parent directory is excluded.
+
+----------------------------------------
+6. VERIFY IT - THIS STEP IS MANDATORY
+----------------------------------------
+
+Do not hand me an unverified .gitignore. Prove it works:
+
+  - Build a throwaway test repository in a scratch/temp directory OUTSIDE my
+    project. Never run `git init` or `git add` in my project just to test, and
+    never create dummy runtime files inside my project.
+  - Copy in the new .gitignore, then create empty stand-ins for BOTH sets: every
+    real project file (including any credential/config file), and every runtime
+    file you intend to ignore. Include the awkward cases: a couple of
+    numbered/cycle files, a `.lock`, a mkstemp-style `.tmp`, an office lock file
+    like `~$output.xlsx`, a bytecode directory, and the environment directory.
+  - Run `git init`, `git add -A`, then print both sides:
+        git ls-files                                  (what would be committed)
+        git status --porcelain --ignored | grep '^!!'  (what is ignored)
+  - Confirm every required file - credentials included - appears in the tracked
+    list, and every runtime file appears in the ignored list. If anything landed
+    on the wrong side, fix the .gitignore and re-run the check until it is
+    correct.
+  - Delete the throwaway repository when you are done.
+
+----------------------------------------
+7. WHAT TO TELL ME WHEN YOU ARE FINISHED
+----------------------------------------
+
+  - A table of what is ignored, grouped by category, and the list of what stays
+    tracked.
+  - Confirmation that no credential/secret pattern was added, and that no broad
+    extension glob was used.
+  - Any file you were unsure about, which way you decided, and why - especially
+    anything the script writes that you chose to TRACK.
+  - Whether the project is currently a git repository at all.
+  - If any runtime file may already be committed in the existing history, remind
+    me that .gitignore does not untrack files that are already tracked, and give
+    me the ready-to-run `git rm --cached` command for exactly those files (with
+    `--ignore-unmatch` for the wildcard families). Do not run it yourself
+    without asking.
+  - Do not commit, push, or run `git init` unless I ask you to.
+
+===============================================================================
+PROMPT ENDS HERE
+===============================================================================

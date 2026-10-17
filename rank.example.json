@@ -1,0 +1,5 @@
+{
+    "_comment": "Copy this to rank.json and set this laptop's rank. rank.json is gitignored, so a git pull can never conflict with it. Laptop 1 can skip it entirely: the defaults in student_scraper.py are already rank 1. num_sys must be the SAME on every laptop; rank must be DIFFERENT on each, from 1 to num_sys.",
+    "rank": 2,
+    "num_sys": 3
+}

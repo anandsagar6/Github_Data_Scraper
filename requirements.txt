@@ -1,0 +1,18 @@
+# Required.  Nothing starts without these.
+openpyxl
+playwright
+
+# Optional.  Each one is imported inside a try/except with a working
+# fallback, so the scraper runs without them -- they only improve what it
+# can read:
+#   pdfminer.six   text out of a PDF resume
+#   python-docx    text out of a .docx resume (a zip fallback already exists)
+#   psutil         battery level on a machine that does not expose sysfs,
+#                  which a server does not need
+pdfminer.six
+python-docx
+psutil
+
+# NOT required, though naukri_script lists them: Levenshtein and gtts are
+# used only by new_mylib.py, and this project PARSES that file with ast
+# instead of importing it (see CITY_SOURCE_FILE), so their code never runs.

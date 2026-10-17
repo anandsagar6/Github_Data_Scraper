@@ -1,0 +1,3592 @@
+OPTIMIZED GITHUB TARGET AUDIENCE KEYWORDS - ARRANGED BY CATEGORY
+================================================================
+
+This file reorganizes the supplied reduced keyword file without inventing
+new keyword families.
+
+CATEGORY PRIORITY:
+1. CATEGORY 1 - IT1 Main / Primary IT Audience
+2. CATEGORY 1 - IT2 Secondary / Other IT Audience
+3. CATEGORY 3 - Career Change Audience
+4. CATEGORY 2 - Other / Non-IT Engineering Audience
+
+IMPORTANT CATEGORY 3 RULE:
+A broad non-IT education keyword alone should not qualify a candidate.
+Use it together with a meaningful IT course, certification, training,
+project, or sufficiently strong IT evidence.
+
+ACADEMIC-YEAR ORDINAL COVERAGE:
+Every education/course/branch keyword now also has 1st year, 2nd year,
+3rd year and 4th year forms, both with and without the word 'student'.
+These academic-year combinations are intentionally not applied to job-role titles.
+
+TARGET EXPERIENCE RANGE:
+Freshers / 0 years plus experienced users with approximately 1 to 3 years experience.
+Generic senior-only terms have been removed because they conflict with this target.
+
+IMPORTANT DUPLICATE RULE:
+Each exact keyword is listed only once in this arranged search library.
+If a keyword logically belongs to more than one category, it is kept in
+the higher-priority search group and should still be usable by the
+classification logic for lower-priority categories.
+
+ACTUAL KEYWORD COUNTS FROM THE SUPPLIED TEXT FILE:
+- Category 1 - IT1: 1243
+- Category 1 - IT2: 661
+- Category 2: 895
+- Category 3: 493
+- Shared fresher/experience/academic-stage signals: 159
+- TOTAL UNIQUE KEYWORDS ACTUALLY PRESENT: 3451
+
+====================================================================================
+CATEGORY 1 - IT AUDIENCE
+====================================================================================
+
+------------------------------------------------------------------------------------
+IT1 - MAIN / PRIMARY IT AUDIENCE
+------------------------------------------------------------------------------------
+
+A. COMPUTER / IT COURSES AND DEGREES
+
+B.Tech Computer Science
+B.Tech Computer Science and Engineering
+B.Tech Information Technology
+B.Tech Computer Engineering
+B.Tech Artificial Intelligence
+B.Tech Artificial Intelligence and Machine Learning
+B.Tech AI and Data Science
+B.Tech Data Science
+B.Tech Cyber Security
+B.Tech Internet of Things
+B.Tech Cloud Computing
+B.Tech Computer Science and Business Systems
+B.E Computer Science
+B.E Computer Science and Engineering
+B.E Information Technology
+B.E Computer Engineering
+B.E Artificial Intelligence
+B.E Artificial Intelligence and Machine Learning
+B.E Data Science
+B.E Cyber Security
+B.E Electronics and Computer Engineering
+BCA
+Bachelor of Computer Applications
+B.Sc Computer Science
+B.Sc Information Technology
+B.Sc Computer Applications
+B.Sc Data Science
+B.Sc Artificial Intelligence
+B.Sc Cyber Security
+B.Sc Software Development
+MCA
+Master of Computer Applications
+M.Sc Computer Science
+M.Sc Information Technology
+M.Sc Data Science
+M.Sc Artificial Intelligence
+M.Sc Cyber Security
+Diploma Computer Science
+Diploma Computer Engineering
+Diploma Information Technology
+Diploma Computer Technology
+Diploma Hardware and Networking
+Diploma Network Engineering
+
+B. PRIMARY IT SUPPORT / NETWORK / SYSTEM / CLOUD JOB ROLES
+
+Desktop Support Engineer
+IT Support Engineer
+IT Support Specialist
+IT Support Technician
+IT Support Analyst
+Technical Support Engineer
+Technical Support Specialist
+Help Desk Engineer
+Help Desk Technician
+Service Desk Engineer
+Service Desk Analyst
+IT Service Desk Analyst
+End User Support Engineer
+End User Computing Engineer
+IT Operations Support Engineer
+Field Support Engineer
+Onsite Support Engineer
+IT Technician
+IT Administrator
+Network Engineer
+Network Support Engineer
+Network Administrator
+Network Technician
+Network Operations Engineer
+NOC Engineer
+NOC Analyst
+Network Operations Analyst
+Network Operations Center Engineer
+Network Implementation Engineer
+Network Field Engineer
+Wireless Network Engineer
+LAN/WAN Engineer
+Infrastructure Engineer
+Infrastructure Support Engineer
+Infrastructure Administrator
+IT Infrastructure Engineer
+Infrastructure Operations Engineer
+Systems Engineer
+System Administrator
+Systems Administrator
+Server Administrator
+Windows Server Administrator
+Linux System Administrator
+Linux Administrator
+Linux Engineer
+Windows System Engineer
+Server Support Engineer
+Systems Support Engineer
+Infrastructure Systems Engineer
+IT Systems Engineer
+System Operations Engineer
+Cloud Support Engineer
+Cloud Administrator
+Cloud Infrastructure Engineer
+Cloud Operations Engineer
+
+C. IT1 ACADEMIC-YEAR VARIANTS
+
+B.Tech Computer Science first year student
+B.Tech Computer Science second year student
+B.Tech Computer Science third year student
+B.Tech Computer Science fourth year student
+B.Tech Computer Science pre-final year student
+B.Tech Computer Science final year student
+B.Tech Computer Science and Engineering first year student
+B.Tech Computer Science and Engineering second year student
+B.Tech Computer Science and Engineering third year student
+B.Tech Computer Science and Engineering fourth year student
+B.Tech Computer Science and Engineering pre-final year student
+B.Tech Computer Science and Engineering final year student
+B.Tech Information Technology first year student
+B.Tech Information Technology second year student
+B.Tech Information Technology third year student
+B.Tech Information Technology fourth year student
+B.Tech Information Technology pre-final year student
+B.Tech Information Technology final year student
+B.Tech Computer Engineering first year student
+B.Tech Computer Engineering second year student
+B.Tech Computer Engineering third year student
+B.Tech Computer Engineering fourth year student
+B.Tech Computer Engineering pre-final year student
+B.Tech Computer Engineering final year student
+B.Tech Artificial Intelligence first year student
+B.Tech Artificial Intelligence second year student
+B.Tech Artificial Intelligence third year student
+B.Tech Artificial Intelligence fourth year student
+B.Tech Artificial Intelligence pre-final year student
+B.Tech Artificial Intelligence final year student
+B.Tech Artificial Intelligence and Machine Learning first year student
+B.Tech Artificial Intelligence and Machine Learning second year student
+B.Tech Artificial Intelligence and Machine Learning third year student
+B.Tech Artificial Intelligence and Machine Learning fourth year student
+B.Tech Artificial Intelligence and Machine Learning pre-final year student
+B.Tech Artificial Intelligence and Machine Learning final year student
+B.Tech AI and Data Science first year student
+B.Tech AI and Data Science second year student
+B.Tech AI and Data Science third year student
+B.Tech AI and Data Science fourth year student
+B.Tech AI and Data Science pre-final year student
+B.Tech AI and Data Science final year student
+B.Tech Data Science first year student
+B.Tech Data Science second year student
+B.Tech Data Science third year student
+B.Tech Data Science fourth year student
+B.Tech Data Science pre-final year student
+B.Tech Data Science final year student
+B.Tech Cyber Security first year student
+B.Tech Cyber Security second year student
+B.Tech Cyber Security third year student
+B.Tech Cyber Security fourth year student
+B.Tech Cyber Security pre-final year student
+B.Tech Cyber Security final year student
+B.Tech Internet of Things first year student
+B.Tech Internet of Things second year student
+B.Tech Internet of Things third year student
+B.Tech Internet of Things fourth year student
+B.Tech Internet of Things pre-final year student
+B.Tech Internet of Things final year student
+B.Tech Cloud Computing first year student
+B.Tech Cloud Computing second year student
+B.Tech Cloud Computing third year student
+B.Tech Cloud Computing fourth year student
+B.Tech Cloud Computing pre-final year student
+B.Tech Cloud Computing final year student
+B.Tech Computer Science and Business Systems first year student
+B.Tech Computer Science and Business Systems second year student
+B.Tech Computer Science and Business Systems third year student
+B.Tech Computer Science and Business Systems fourth year student
+B.Tech Computer Science and Business Systems pre-final year student
+B.Tech Computer Science and Business Systems final year student
+B.E Computer Science first year student
+B.E Computer Science second year student
+B.E Computer Science third year student
+B.E Computer Science fourth year student
+B.E Computer Science pre-final year student
+B.E Computer Science final year student
+B.E Computer Science and Engineering first year student
+B.E Computer Science and Engineering second year student
+B.E Computer Science and Engineering third year student
+B.E Computer Science and Engineering fourth year student
+B.E Computer Science and Engineering pre-final year student
+B.E Computer Science and Engineering final year student
+B.E Information Technology first year student
+B.E Information Technology second year student
+B.E Information Technology third year student
+B.E Information Technology fourth year student
+B.E Information Technology pre-final year student
+B.E Information Technology final year student
+B.E Computer Engineering first year student
+B.E Computer Engineering second year student
+B.E Computer Engineering third year student
+B.E Computer Engineering fourth year student
+B.E Computer Engineering pre-final year student
+B.E Computer Engineering final year student
+B.E Artificial Intelligence first year student
+B.E Artificial Intelligence second year student
+B.E Artificial Intelligence third year student
+B.E Artificial Intelligence fourth year student
+B.E Artificial Intelligence pre-final year student
+B.E Artificial Intelligence final year student
+B.E Artificial Intelligence and Machine Learning first year student
+B.E Artificial Intelligence and Machine Learning second year student
+B.E Artificial Intelligence and Machine Learning third year student
+B.E Artificial Intelligence and Machine Learning fourth year student
+B.E Artificial Intelligence and Machine Learning pre-final year student
+B.E Artificial Intelligence and Machine Learning final year student
+B.E Data Science first year student
+B.E Data Science second year student
+B.E Data Science third year student
+B.E Data Science fourth year student
+B.E Data Science pre-final year student
+B.E Data Science final year student
+B.E Cyber Security first year student
+B.E Cyber Security second year student
+B.E Cyber Security third year student
+B.E Cyber Security fourth year student
+B.E Cyber Security pre-final year student
+B.E Cyber Security final year student
+B.E Electronics and Computer Engineering first year student
+B.E Electronics and Computer Engineering second year student
+B.E Electronics and Computer Engineering third year student
+B.E Electronics and Computer Engineering fourth year student
+B.E Electronics and Computer Engineering pre-final year student
+B.E Electronics and Computer Engineering final year student
+BCA first year student
+BCA second year student
+BCA third year student
+BCA fourth year student
+BCA pre-final year student
+BCA final year student
+B.Sc Computer Science first year student
+B.Sc Computer Science second year student
+B.Sc Computer Science third year student
+B.Sc Computer Science fourth year student
+B.Sc Computer Science pre-final year student
+B.Sc Computer Science final year student
+B.Sc Information Technology first year student
+B.Sc Information Technology second year student
+B.Sc Information Technology third year student
+B.Sc Information Technology fourth year student
+B.Sc Information Technology pre-final year student
+B.Sc Information Technology final year student
+B.Sc Computer Applications first year student
+B.Sc Computer Applications second year student
+B.Sc Computer Applications third year student
+B.Sc Computer Applications fourth year student
+B.Sc Computer Applications pre-final year student
+B.Sc Computer Applications final year student
+B.Sc Data Science first year student
+B.Sc Data Science second year student
+B.Sc Data Science third year student
+B.Sc Data Science fourth year student
+B.Sc Data Science pre-final year student
+B.Sc Data Science final year student
+B.Sc Artificial Intelligence first year student
+B.Sc Artificial Intelligence second year student
+B.Sc Artificial Intelligence third year student
+B.Sc Artificial Intelligence fourth year student
+B.Sc Artificial Intelligence pre-final year student
+B.Sc Artificial Intelligence final year student
+B.Sc Cyber Security first year student
+B.Sc Cyber Security second year student
+B.Sc Cyber Security third year student
+B.Sc Cyber Security fourth year student
+B.Sc Cyber Security pre-final year student
+B.Sc Cyber Security final year student
+B.Sc Software Development first year student
+B.Sc Software Development second year student
+B.Sc Software Development third year student
+B.Sc Software Development fourth year student
+B.Sc Software Development pre-final year student
+B.Sc Software Development final year student
+MCA first year student
+MCA second year student
+MCA third year student
+MCA fourth year student
+MCA pre-final year student
+MCA final year student
+M.Sc Computer Science first year student
+M.Sc Computer Science second year student
+M.Sc Computer Science third year student
+M.Sc Computer Science fourth year student
+M.Sc Computer Science pre-final year student
+M.Sc Computer Science final year student
+M.Sc Information Technology first year student
+M.Sc Information Technology second year student
+M.Sc Information Technology third year student
+M.Sc Information Technology fourth year student
+M.Sc Information Technology pre-final year student
+M.Sc Information Technology final year student
+M.Sc Data Science first year student
+M.Sc Data Science second year student
+M.Sc Data Science third year student
+M.Sc Data Science fourth year student
+M.Sc Data Science pre-final year student
+M.Sc Data Science final year student
+M.Sc Artificial Intelligence first year student
+M.Sc Artificial Intelligence second year student
+M.Sc Artificial Intelligence third year student
+M.Sc Artificial Intelligence fourth year student
+M.Sc Artificial Intelligence pre-final year student
+M.Sc Artificial Intelligence final year student
+M.Sc Cyber Security first year student
+M.Sc Cyber Security second year student
+M.Sc Cyber Security third year student
+M.Sc Cyber Security fourth year student
+M.Sc Cyber Security pre-final year student
+M.Sc Cyber Security final year student
+Diploma Computer Science first year student
+Diploma Computer Science second year student
+Diploma Computer Science third year student
+Diploma Computer Science fourth year student
+Diploma Computer Science pre-final year student
+Diploma Computer Science final year student
+Diploma Computer Engineering first year student
+Diploma Computer Engineering second year student
+Diploma Computer Engineering third year student
+Diploma Computer Engineering fourth year student
+Diploma Computer Engineering pre-final year student
+Diploma Computer Engineering final year student
+Diploma Information Technology first year student
+Diploma Information Technology second year student
+Diploma Information Technology third year student
+Diploma Information Technology fourth year student
+Diploma Information Technology pre-final year student
+Diploma Information Technology final year student
+Diploma Computer Technology first year student
+Diploma Computer Technology second year student
+Diploma Computer Technology third year student
+Diploma Computer Technology fourth year student
+Diploma Computer Technology pre-final year student
+Diploma Computer Technology final year student
+Diploma Hardware and Networking first year student
+Diploma Hardware and Networking second year student
+Diploma Hardware and Networking third year student
+Diploma Hardware and Networking fourth year student
+Diploma Hardware and Networking pre-final year student
+Diploma Hardware and Networking final year student
+Diploma Network Engineering first year student
+Diploma Network Engineering second year student
+Diploma Network Engineering third year student
+Diploma Network Engineering fourth year student
+Diploma Network Engineering pre-final year student
+Diploma Network Engineering final year student
+
+D. IT1 FRESHER / ENTRY-LEVEL / JUNIOR ROLE VARIANTS
+
+fresher Desktop Support Engineer
+entry level Desktop Support Engineer
+junior Desktop Support Engineer
+fresher IT Support Engineer
+entry level IT Support Engineer
+junior IT Support Engineer
+fresher Technical Support Engineer
+entry level Technical Support Engineer
+junior Technical Support Engineer
+fresher Help Desk Engineer
+entry level Help Desk Engineer
+junior Help Desk Engineer
+fresher Service Desk Engineer
+entry level Service Desk Engineer
+junior Service Desk Engineer
+fresher Network Engineer
+entry level Network Engineer
+junior Network Engineer
+fresher Network Administrator
+entry level Network Administrator
+junior Network Administrator
+fresher NOC Engineer
+entry level NOC Engineer
+junior NOC Engineer
+fresher Infrastructure Engineer
+entry level Infrastructure Engineer
+junior Infrastructure Engineer
+fresher Systems Engineer
+entry level Systems Engineer
+junior Systems Engineer
+fresher System Administrator
+entry level System Administrator
+junior System Administrator
+fresher Linux Administrator
+entry level Linux Administrator
+junior Linux Administrator
+fresher Cloud Support Engineer
+entry level Cloud Support Engineer
+junior Cloud Support Engineer
+fresher Cloud Administrator
+entry level Cloud Administrator
+junior Cloud Administrator
+fresher IT Technician
+entry level IT Technician
+junior IT Technician
+fresher IT Administrator
+entry level IT Administrator
+junior IT Administrator
+fresher Network Technician
+entry level Network Technician
+junior Network Technician
+fresher NOC Analyst
+entry level NOC Analyst
+junior NOC Analyst
+fresher Linux Engineer
+entry level Linux Engineer
+junior Linux Engineer
+fresher Windows System Engineer
+entry level Windows System Engineer
+junior Windows System Engineer
+
+------------------------------------------------------------------------------------
+
+E. IT1 JOB ROLE + 1-3 YEAR EXPERIENCE VARIANTS
+
+Desktop Support Engineer 1 year experience
+Desktop Support Engineer 1+ year experience
+Desktop Support Engineer 1+ years experience
+Desktop Support Engineer 2 years experience
+Desktop Support Engineer 2+ years experience
+Desktop Support Engineer 3 years experience
+Desktop Support Engineer 3+ years experience
+Desktop Support Engineer 1-3 years experience
+Desktop Support Engineer 1 to 3 years experience
+IT Support Engineer 1 year experience
+IT Support Engineer 1+ year experience
+IT Support Engineer 1+ years experience
+IT Support Engineer 2 years experience
+IT Support Engineer 2+ years experience
+IT Support Engineer 3 years experience
+IT Support Engineer 3+ years experience
+IT Support Engineer 1-3 years experience
+IT Support Engineer 1 to 3 years experience
+IT Support Specialist 1 year experience
+IT Support Specialist 1+ year experience
+IT Support Specialist 1+ years experience
+IT Support Specialist 2 years experience
+IT Support Specialist 2+ years experience
+IT Support Specialist 3 years experience
+IT Support Specialist 3+ years experience
+IT Support Specialist 1-3 years experience
+IT Support Specialist 1 to 3 years experience
+IT Support Technician 1 year experience
+IT Support Technician 1+ year experience
+IT Support Technician 1+ years experience
+IT Support Technician 2 years experience
+IT Support Technician 2+ years experience
+IT Support Technician 3 years experience
+IT Support Technician 3+ years experience
+IT Support Technician 1-3 years experience
+IT Support Technician 1 to 3 years experience
+IT Support Analyst 1 year experience
+IT Support Analyst 1+ year experience
+IT Support Analyst 1+ years experience
+IT Support Analyst 2 years experience
+IT Support Analyst 2+ years experience
+IT Support Analyst 3 years experience
+IT Support Analyst 3+ years experience
+IT Support Analyst 1-3 years experience
+IT Support Analyst 1 to 3 years experience
+Technical Support Engineer 1 year experience
+Technical Support Engineer 1+ year experience
+Technical Support Engineer 1+ years experience
+Technical Support Engineer 2 years experience
+Technical Support Engineer 2+ years experience
+Technical Support Engineer 3 years experience
+Technical Support Engineer 3+ years experience
+Technical Support Engineer 1-3 years experience
+Technical Support Engineer 1 to 3 years experience
+Technical Support Specialist 1 year experience
+Technical Support Specialist 1+ year experience
+Technical Support Specialist 1+ years experience
+Technical Support Specialist 2 years experience
+Technical Support Specialist 2+ years experience
+Technical Support Specialist 3 years experience
+Technical Support Specialist 3+ years experience
+Technical Support Specialist 1-3 years experience
+Technical Support Specialist 1 to 3 years experience
+Help Desk Engineer 1 year experience
+Help Desk Engineer 1+ year experience
+Help Desk Engineer 1+ years experience
+Help Desk Engineer 2 years experience
+Help Desk Engineer 2+ years experience
+Help Desk Engineer 3 years experience
+Help Desk Engineer 3+ years experience
+Help Desk Engineer 1-3 years experience
+Help Desk Engineer 1 to 3 years experience
+Help Desk Technician 1 year experience
+Help Desk Technician 1+ year experience
+Help Desk Technician 1+ years experience
+Help Desk Technician 2 years experience
+Help Desk Technician 2+ years experience
+Help Desk Technician 3 years experience
+Help Desk Technician 3+ years experience
+Help Desk Technician 1-3 years experience
+Help Desk Technician 1 to 3 years experience
+Service Desk Engineer 1 year experience
+Service Desk Engineer 1+ year experience
+Service Desk Engineer 1+ years experience
+Service Desk Engineer 2 years experience
+Service Desk Engineer 2+ years experience
+Service Desk Engineer 3 years experience
+Service Desk Engineer 3+ years experience
+Service Desk Engineer 1-3 years experience
+Service Desk Engineer 1 to 3 years experience
+Service Desk Analyst 1 year experience
+Service Desk Analyst 1+ year experience
+Service Desk Analyst 1+ years experience
+Service Desk Analyst 2 years experience
+Service Desk Analyst 2+ years experience
+Service Desk Analyst 3 years experience
+Service Desk Analyst 3+ years experience
+Service Desk Analyst 1-3 years experience
+Service Desk Analyst 1 to 3 years experience
+IT Service Desk Analyst 1 year experience
+IT Service Desk Analyst 1+ year experience
+IT Service Desk Analyst 1+ years experience
+IT Service Desk Analyst 2 years experience
+IT Service Desk Analyst 2+ years experience
+IT Service Desk Analyst 3 years experience
+IT Service Desk Analyst 3+ years experience
+IT Service Desk Analyst 1-3 years experience
+IT Service Desk Analyst 1 to 3 years experience
+End User Support Engineer 1 year experience
+End User Support Engineer 1+ year experience
+End User Support Engineer 1+ years experience
+End User Support Engineer 2 years experience
+End User Support Engineer 2+ years experience
+End User Support Engineer 3 years experience
+End User Support Engineer 3+ years experience
+End User Support Engineer 1-3 years experience
+End User Support Engineer 1 to 3 years experience
+End User Computing Engineer 1 year experience
+End User Computing Engineer 1+ year experience
+End User Computing Engineer 1+ years experience
+End User Computing Engineer 2 years experience
+End User Computing Engineer 2+ years experience
+End User Computing Engineer 3 years experience
+End User Computing Engineer 3+ years experience
+End User Computing Engineer 1-3 years experience
+End User Computing Engineer 1 to 3 years experience
+IT Operations Support Engineer 1 year experience
+IT Operations Support Engineer 1+ year experience
+IT Operations Support Engineer 1+ years experience
+IT Operations Support Engineer 2 years experience
+IT Operations Support Engineer 2+ years experience
+IT Operations Support Engineer 3 years experience
+IT Operations Support Engineer 3+ years experience
+IT Operations Support Engineer 1-3 years experience
+IT Operations Support Engineer 1 to 3 years experience
+Field Support Engineer 1 year experience
+Field Support Engineer 1+ year experience
+Field Support Engineer 1+ years experience
+Field Support Engineer 2 years experience
+Field Support Engineer 2+ years experience
+Field Support Engineer 3 years experience
+Field Support Engineer 3+ years experience
+Field Support Engineer 1-3 years experience
+Field Support Engineer 1 to 3 years experience
+Onsite Support Engineer 1 year experience
+Onsite Support Engineer 1+ year experience
+Onsite Support Engineer 1+ years experience
+Onsite Support Engineer 2 years experience
+Onsite Support Engineer 2+ years experience
+Onsite Support Engineer 3 years experience
+Onsite Support Engineer 3+ years experience
+Onsite Support Engineer 1-3 years experience
+Onsite Support Engineer 1 to 3 years experience
+IT Technician 1 year experience
+IT Technician 1+ year experience
+IT Technician 1+ years experience
+IT Technician 2 years experience
+IT Technician 2+ years experience
+IT Technician 3 years experience
+IT Technician 3+ years experience
+IT Technician 1-3 years experience
+IT Technician 1 to 3 years experience
+IT Administrator 1 year experience
+IT Administrator 1+ year experience
+IT Administrator 1+ years experience
+IT Administrator 2 years experience
+IT Administrator 2+ years experience
+IT Administrator 3 years experience
+IT Administrator 3+ years experience
+IT Administrator 1-3 years experience
+IT Administrator 1 to 3 years experience
+Network Engineer 1 year experience
+Network Engineer 1+ year experience
+Network Engineer 1+ years experience
+Network Engineer 2 years experience
+Network Engineer 2+ years experience
+Network Engineer 3 years experience
+Network Engineer 3+ years experience
+Network Engineer 1-3 years experience
+Network Engineer 1 to 3 years experience
+Network Support Engineer 1 year experience
+Network Support Engineer 1+ year experience
+Network Support Engineer 1+ years experience
+Network Support Engineer 2 years experience
+Network Support Engineer 2+ years experience
+Network Support Engineer 3 years experience
+Network Support Engineer 3+ years experience
+Network Support Engineer 1-3 years experience
+Network Support Engineer 1 to 3 years experience
+Network Administrator 1 year experience
+Network Administrator 1+ year experience
+Network Administrator 1+ years experience
+Network Administrator 2 years experience
+Network Administrator 2+ years experience
+Network Administrator 3 years experience
+Network Administrator 3+ years experience
+Network Administrator 1-3 years experience
+Network Administrator 1 to 3 years experience
+Network Technician 1 year experience
+Network Technician 1+ year experience
+Network Technician 1+ years experience
+Network Technician 2 years experience
+Network Technician 2+ years experience
+Network Technician 3 years experience
+Network Technician 3+ years experience
+Network Technician 1-3 years experience
+Network Technician 1 to 3 years experience
+Network Operations Engineer 1 year experience
+Network Operations Engineer 1+ year experience
+Network Operations Engineer 1+ years experience
+Network Operations Engineer 2 years experience
+Network Operations Engineer 2+ years experience
+Network Operations Engineer 3 years experience
+Network Operations Engineer 3+ years experience
+Network Operations Engineer 1-3 years experience
+Network Operations Engineer 1 to 3 years experience
+NOC Engineer 1 year experience
+NOC Engineer 1+ year experience
+NOC Engineer 1+ years experience
+NOC Engineer 2 years experience
+NOC Engineer 2+ years experience
+NOC Engineer 3 years experience
+NOC Engineer 3+ years experience
+NOC Engineer 1-3 years experience
+NOC Engineer 1 to 3 years experience
+NOC Analyst 1 year experience
+NOC Analyst 1+ year experience
+NOC Analyst 1+ years experience
+NOC Analyst 2 years experience
+NOC Analyst 2+ years experience
+NOC Analyst 3 years experience
+NOC Analyst 3+ years experience
+NOC Analyst 1-3 years experience
+NOC Analyst 1 to 3 years experience
+Network Operations Analyst 1 year experience
+Network Operations Analyst 1+ year experience
+Network Operations Analyst 1+ years experience
+Network Operations Analyst 2 years experience
+Network Operations Analyst 2+ years experience
+Network Operations Analyst 3 years experience
+Network Operations Analyst 3+ years experience
+Network Operations Analyst 1-3 years experience
+Network Operations Analyst 1 to 3 years experience
+Network Operations Center Engineer 1 year experience
+Network Operations Center Engineer 1+ year experience
+Network Operations Center Engineer 1+ years experience
+Network Operations Center Engineer 2 years experience
+Network Operations Center Engineer 2+ years experience
+Network Operations Center Engineer 3 years experience
+Network Operations Center Engineer 3+ years experience
+Network Operations Center Engineer 1-3 years experience
+Network Operations Center Engineer 1 to 3 years experience
+Network Implementation Engineer 1 year experience
+Network Implementation Engineer 1+ year experience
+Network Implementation Engineer 1+ years experience
+Network Implementation Engineer 2 years experience
+Network Implementation Engineer 2+ years experience
+Network Implementation Engineer 3 years experience
+Network Implementation Engineer 3+ years experience
+Network Implementation Engineer 1-3 years experience
+Network Implementation Engineer 1 to 3 years experience
+Network Field Engineer 1 year experience
+Network Field Engineer 1+ year experience
+Network Field Engineer 1+ years experience
+Network Field Engineer 2 years experience
+Network Field Engineer 2+ years experience
+Network Field Engineer 3 years experience
+Network Field Engineer 3+ years experience
+Network Field Engineer 1-3 years experience
+Network Field Engineer 1 to 3 years experience
+Wireless Network Engineer 1 year experience
+Wireless Network Engineer 1+ year experience
+Wireless Network Engineer 1+ years experience
+Wireless Network Engineer 2 years experience
+Wireless Network Engineer 2+ years experience
+Wireless Network Engineer 3 years experience
+Wireless Network Engineer 3+ years experience
+Wireless Network Engineer 1-3 years experience
+Wireless Network Engineer 1 to 3 years experience
+LAN/WAN Engineer 1 year experience
+LAN/WAN Engineer 1+ year experience
+LAN/WAN Engineer 1+ years experience
+LAN/WAN Engineer 2 years experience
+LAN/WAN Engineer 2+ years experience
+LAN/WAN Engineer 3 years experience
+LAN/WAN Engineer 3+ years experience
+LAN/WAN Engineer 1-3 years experience
+LAN/WAN Engineer 1 to 3 years experience
+Infrastructure Engineer 1 year experience
+Infrastructure Engineer 1+ year experience
+Infrastructure Engineer 1+ years experience
+Infrastructure Engineer 2 years experience
+Infrastructure Engineer 2+ years experience
+Infrastructure Engineer 3 years experience
+Infrastructure Engineer 3+ years experience
+Infrastructure Engineer 1-3 years experience
+Infrastructure Engineer 1 to 3 years experience
+Infrastructure Support Engineer 1 year experience
+Infrastructure Support Engineer 1+ year experience
+Infrastructure Support Engineer 1+ years experience
+Infrastructure Support Engineer 2 years experience
+Infrastructure Support Engineer 2+ years experience
+Infrastructure Support Engineer 3 years experience
+Infrastructure Support Engineer 3+ years experience
+Infrastructure Support Engineer 1-3 years experience
+Infrastructure Support Engineer 1 to 3 years experience
+Infrastructure Administrator 1 year experience
+Infrastructure Administrator 1+ year experience
+Infrastructure Administrator 1+ years experience
+Infrastructure Administrator 2 years experience
+Infrastructure Administrator 2+ years experience
+Infrastructure Administrator 3 years experience
+Infrastructure Administrator 3+ years experience
+Infrastructure Administrator 1-3 years experience
+Infrastructure Administrator 1 to 3 years experience
+IT Infrastructure Engineer 1 year experience
+IT Infrastructure Engineer 1+ year experience
+IT Infrastructure Engineer 1+ years experience
+IT Infrastructure Engineer 2 years experience
+IT Infrastructure Engineer 2+ years experience
+IT Infrastructure Engineer 3 years experience
+IT Infrastructure Engineer 3+ years experience
+IT Infrastructure Engineer 1-3 years experience
+IT Infrastructure Engineer 1 to 3 years experience
+Infrastructure Operations Engineer 1 year experience
+Infrastructure Operations Engineer 1+ year experience
+Infrastructure Operations Engineer 1+ years experience
+Infrastructure Operations Engineer 2 years experience
+Infrastructure Operations Engineer 2+ years experience
+Infrastructure Operations Engineer 3 years experience
+Infrastructure Operations Engineer 3+ years experience
+Infrastructure Operations Engineer 1-3 years experience
+Infrastructure Operations Engineer 1 to 3 years experience
+Systems Engineer 1 year experience
+Systems Engineer 1+ year experience
+Systems Engineer 1+ years experience
+Systems Engineer 2 years experience
+Systems Engineer 2+ years experience
+Systems Engineer 3 years experience
+Systems Engineer 3+ years experience
+Systems Engineer 1-3 years experience
+Systems Engineer 1 to 3 years experience
+System Administrator 1 year experience
+System Administrator 1+ year experience
+System Administrator 1+ years experience
+System Administrator 2 years experience
+System Administrator 2+ years experience
+System Administrator 3 years experience
+System Administrator 3+ years experience
+System Administrator 1-3 years experience
+System Administrator 1 to 3 years experience
+Systems Administrator 1 year experience
+Systems Administrator 1+ year experience
+Systems Administrator 1+ years experience
+Systems Administrator 2 years experience
+Systems Administrator 2+ years experience
+Systems Administrator 3 years experience
+Systems Administrator 3+ years experience
+Systems Administrator 1-3 years experience
+Systems Administrator 1 to 3 years experience
+Server Administrator 1 year experience
+Server Administrator 1+ year experience
+Server Administrator 1+ years experience
+Server Administrator 2 years experience
+Server Administrator 2+ years experience
+Server Administrator 3 years experience
+Server Administrator 3+ years experience
+Server Administrator 1-3 years experience
+Server Administrator 1 to 3 years experience
+Windows Server Administrator 1 year experience
+Windows Server Administrator 1+ year experience
+Windows Server Administrator 1+ years experience
+Windows Server Administrator 2 years experience
+Windows Server Administrator 2+ years experience
+Windows Server Administrator 3 years experience
+Windows Server Administrator 3+ years experience
+Windows Server Administrator 1-3 years experience
+Windows Server Administrator 1 to 3 years experience
+Linux System Administrator 1 year experience
+Linux System Administrator 1+ year experience
+Linux System Administrator 1+ years experience
+Linux System Administrator 2 years experience
+Linux System Administrator 2+ years experience
+Linux System Administrator 3 years experience
+Linux System Administrator 3+ years experience
+Linux System Administrator 1-3 years experience
+Linux System Administrator 1 to 3 years experience
+Linux Administrator 1 year experience
+Linux Administrator 1+ year experience
+Linux Administrator 1+ years experience
+Linux Administrator 2 years experience
+Linux Administrator 2+ years experience
+Linux Administrator 3 years experience
+Linux Administrator 3+ years experience
+Linux Administrator 1-3 years experience
+Linux Administrator 1 to 3 years experience
+Linux Engineer 1 year experience
+Linux Engineer 1+ year experience
+Linux Engineer 1+ years experience
+Linux Engineer 2 years experience
+Linux Engineer 2+ years experience
+Linux Engineer 3 years experience
+Linux Engineer 3+ years experience
+Linux Engineer 1-3 years experience
+Linux Engineer 1 to 3 years experience
+Windows System Engineer 1 year experience
+Windows System Engineer 1+ year experience
+Windows System Engineer 1+ years experience
+Windows System Engineer 2 years experience
+Windows System Engineer 2+ years experience
+Windows System Engineer 3 years experience
+Windows System Engineer 3+ years experience
+Windows System Engineer 1-3 years experience
+Windows System Engineer 1 to 3 years experience
+Server Support Engineer 1 year experience
+Server Support Engineer 1+ year experience
+Server Support Engineer 1+ years experience
+Server Support Engineer 2 years experience
+Server Support Engineer 2+ years experience
+Server Support Engineer 3 years experience
+Server Support Engineer 3+ years experience
+Server Support Engineer 1-3 years experience
+Server Support Engineer 1 to 3 years experience
+Systems Support Engineer 1 year experience
+Systems Support Engineer 1+ year experience
+Systems Support Engineer 1+ years experience
+Systems Support Engineer 2 years experience
+Systems Support Engineer 2+ years experience
+Systems Support Engineer 3 years experience
+Systems Support Engineer 3+ years experience
+Systems Support Engineer 1-3 years experience
+Systems Support Engineer 1 to 3 years experience
+Infrastructure Systems Engineer 1 year experience
+Infrastructure Systems Engineer 1+ year experience
+Infrastructure Systems Engineer 1+ years experience
+Infrastructure Systems Engineer 2 years experience
+Infrastructure Systems Engineer 2+ years experience
+Infrastructure Systems Engineer 3 years experience
+Infrastructure Systems Engineer 3+ years experience
+Infrastructure Systems Engineer 1-3 years experience
+Infrastructure Systems Engineer 1 to 3 years experience
+IT Systems Engineer 1 year experience
+IT Systems Engineer 1+ year experience
+IT Systems Engineer 1+ years experience
+IT Systems Engineer 2 years experience
+IT Systems Engineer 2+ years experience
+IT Systems Engineer 3 years experience
+IT Systems Engineer 3+ years experience
+IT Systems Engineer 1-3 years experience
+IT Systems Engineer 1 to 3 years experience
+System Operations Engineer 1 year experience
+System Operations Engineer 1+ year experience
+System Operations Engineer 1+ years experience
+System Operations Engineer 2 years experience
+System Operations Engineer 2+ years experience
+System Operations Engineer 3 years experience
+System Operations Engineer 3+ years experience
+System Operations Engineer 1-3 years experience
+System Operations Engineer 1 to 3 years experience
+Cloud Support Engineer 1 year experience
+Cloud Support Engineer 1+ year experience
+Cloud Support Engineer 1+ years experience
+Cloud Support Engineer 2 years experience
+Cloud Support Engineer 2+ years experience
+Cloud Support Engineer 3 years experience
+Cloud Support Engineer 3+ years experience
+Cloud Support Engineer 1-3 years experience
+Cloud Support Engineer 1 to 3 years experience
+Cloud Administrator 1 year experience
+Cloud Administrator 1+ year experience
+Cloud Administrator 1+ years experience
+Cloud Administrator 2 years experience
+Cloud Administrator 2+ years experience
+Cloud Administrator 3 years experience
+Cloud Administrator 3+ years experience
+Cloud Administrator 1-3 years experience
+Cloud Administrator 1 to 3 years experience
+Cloud Infrastructure Engineer 1 year experience
+Cloud Infrastructure Engineer 1+ year experience
+Cloud Infrastructure Engineer 1+ years experience
+Cloud Infrastructure Engineer 2 years experience
+Cloud Infrastructure Engineer 2+ years experience
+Cloud Infrastructure Engineer 3 years experience
+Cloud Infrastructure Engineer 3+ years experience
+Cloud Infrastructure Engineer 1-3 years experience
+Cloud Infrastructure Engineer 1 to 3 years experience
+Cloud Operations Engineer 1 year experience
+Cloud Operations Engineer 1+ year experience
+Cloud Operations Engineer 1+ years experience
+Cloud Operations Engineer 2 years experience
+Cloud Operations Engineer 2+ years experience
+Cloud Operations Engineer 3 years experience
+Cloud Operations Engineer 3+ years experience
+Cloud Operations Engineer 1-3 years experience
+Cloud Operations Engineer 1 to 3 years experience
+
+
+F. IT1 COURSE / DEGREE + ORDINAL ACADEMIC-YEAR VARIANTS
+
+B.Tech Computer Science 1st year
+B.Tech Computer Science 1st year student
+B.Tech Computer Science 2nd year
+B.Tech Computer Science 2nd year student
+B.Tech Computer Science 3rd year
+B.Tech Computer Science 3rd year student
+B.Tech Computer Science 4th year
+B.Tech Computer Science 4th year student
+B.Tech Computer Science and Engineering 1st year
+B.Tech Computer Science and Engineering 1st year student
+B.Tech Computer Science and Engineering 2nd year
+B.Tech Computer Science and Engineering 2nd year student
+B.Tech Computer Science and Engineering 3rd year
+B.Tech Computer Science and Engineering 3rd year student
+B.Tech Computer Science and Engineering 4th year
+B.Tech Computer Science and Engineering 4th year student
+B.Tech Information Technology 1st year
+B.Tech Information Technology 1st year student
+B.Tech Information Technology 2nd year
+B.Tech Information Technology 2nd year student
+B.Tech Information Technology 3rd year
+B.Tech Information Technology 3rd year student
+B.Tech Information Technology 4th year
+B.Tech Information Technology 4th year student
+B.Tech Computer Engineering 1st year
+B.Tech Computer Engineering 1st year student
+B.Tech Computer Engineering 2nd year
+B.Tech Computer Engineering 2nd year student
+B.Tech Computer Engineering 3rd year
+B.Tech Computer Engineering 3rd year student
+B.Tech Computer Engineering 4th year
+B.Tech Computer Engineering 4th year student
+B.Tech Artificial Intelligence 1st year
+B.Tech Artificial Intelligence 1st year student
+B.Tech Artificial Intelligence 2nd year
+B.Tech Artificial Intelligence 2nd year student
+B.Tech Artificial Intelligence 3rd year
+B.Tech Artificial Intelligence 3rd year student
+B.Tech Artificial Intelligence 4th year
+B.Tech Artificial Intelligence 4th year student
+B.Tech Artificial Intelligence and Machine Learning 1st year
+B.Tech Artificial Intelligence and Machine Learning 1st year student
+B.Tech Artificial Intelligence and Machine Learning 2nd year
+B.Tech Artificial Intelligence and Machine Learning 2nd year student
+B.Tech Artificial Intelligence and Machine Learning 3rd year
+B.Tech Artificial Intelligence and Machine Learning 3rd year student
+B.Tech Artificial Intelligence and Machine Learning 4th year
+B.Tech Artificial Intelligence and Machine Learning 4th year student
+B.Tech AI and Data Science 1st year
+B.Tech AI and Data Science 1st year student
+B.Tech AI and Data Science 2nd year
+B.Tech AI and Data Science 2nd year student
+B.Tech AI and Data Science 3rd year
+B.Tech AI and Data Science 3rd year student
+B.Tech AI and Data Science 4th year
+B.Tech AI and Data Science 4th year student
+B.Tech Data Science 1st year
+B.Tech Data Science 1st year student
+B.Tech Data Science 2nd year
+B.Tech Data Science 2nd year student
+B.Tech Data Science 3rd year
+B.Tech Data Science 3rd year student
+B.Tech Data Science 4th year
+B.Tech Data Science 4th year student
+B.Tech Cyber Security 1st year
+B.Tech Cyber Security 1st year student
+B.Tech Cyber Security 2nd year
+B.Tech Cyber Security 2nd year student
+B.Tech Cyber Security 3rd year
+B.Tech Cyber Security 3rd year student
+B.Tech Cyber Security 4th year
+B.Tech Cyber Security 4th year student
+B.Tech Internet of Things 1st year
+B.Tech Internet of Things 1st year student
+B.Tech Internet of Things 2nd year
+B.Tech Internet of Things 2nd year student
+B.Tech Internet of Things 3rd year
+B.Tech Internet of Things 3rd year student
+B.Tech Internet of Things 4th year
+B.Tech Internet of Things 4th year student
+B.Tech Cloud Computing 1st year
+B.Tech Cloud Computing 1st year student
+B.Tech Cloud Computing 2nd year
+B.Tech Cloud Computing 2nd year student
+B.Tech Cloud Computing 3rd year
+B.Tech Cloud Computing 3rd year student
+B.Tech Cloud Computing 4th year
+B.Tech Cloud Computing 4th year student
+B.Tech Computer Science and Business Systems 1st year
+B.Tech Computer Science and Business Systems 1st year student
+B.Tech Computer Science and Business Systems 2nd year
+B.Tech Computer Science and Business Systems 2nd year student
+B.Tech Computer Science and Business Systems 3rd year
+B.Tech Computer Science and Business Systems 3rd year student
+B.Tech Computer Science and Business Systems 4th year
+B.Tech Computer Science and Business Systems 4th year student
+B.E Computer Science 1st year
+B.E Computer Science 1st year student
+B.E Computer Science 2nd year
+B.E Computer Science 2nd year student
+B.E Computer Science 3rd year
+B.E Computer Science 3rd year student
+B.E Computer Science 4th year
+B.E Computer Science 4th year student
+B.E Computer Science and Engineering 1st year
+B.E Computer Science and Engineering 1st year student
+B.E Computer Science and Engineering 2nd year
+B.E Computer Science and Engineering 2nd year student
+B.E Computer Science and Engineering 3rd year
+B.E Computer Science and Engineering 3rd year student
+B.E Computer Science and Engineering 4th year
+B.E Computer Science and Engineering 4th year student
+B.E Information Technology 1st year
+B.E Information Technology 1st year student
+B.E Information Technology 2nd year
+B.E Information Technology 2nd year student
+B.E Information Technology 3rd year
+B.E Information Technology 3rd year student
+B.E Information Technology 4th year
+B.E Information Technology 4th year student
+B.E Computer Engineering 1st year
+B.E Computer Engineering 1st year student
+B.E Computer Engineering 2nd year
+B.E Computer Engineering 2nd year student
+B.E Computer Engineering 3rd year
+B.E Computer Engineering 3rd year student
+B.E Computer Engineering 4th year
+B.E Computer Engineering 4th year student
+B.E Artificial Intelligence 1st year
+B.E Artificial Intelligence 1st year student
+B.E Artificial Intelligence 2nd year
+B.E Artificial Intelligence 2nd year student
+B.E Artificial Intelligence 3rd year
+B.E Artificial Intelligence 3rd year student
+B.E Artificial Intelligence 4th year
+B.E Artificial Intelligence 4th year student
+B.E Artificial Intelligence and Machine Learning 1st year
+B.E Artificial Intelligence and Machine Learning 1st year student
+B.E Artificial Intelligence and Machine Learning 2nd year
+B.E Artificial Intelligence and Machine Learning 2nd year student
+B.E Artificial Intelligence and Machine Learning 3rd year
+B.E Artificial Intelligence and Machine Learning 3rd year student
+B.E Artificial Intelligence and Machine Learning 4th year
+B.E Artificial Intelligence and Machine Learning 4th year student
+B.E Data Science 1st year
+B.E Data Science 1st year student
+B.E Data Science 2nd year
+B.E Data Science 2nd year student
+B.E Data Science 3rd year
+B.E Data Science 3rd year student
+B.E Data Science 4th year
+B.E Data Science 4th year student
+B.E Cyber Security 1st year
+B.E Cyber Security 1st year student
+B.E Cyber Security 2nd year
+B.E Cyber Security 2nd year student
+B.E Cyber Security 3rd year
+B.E Cyber Security 3rd year student
+B.E Cyber Security 4th year
+B.E Cyber Security 4th year student
+B.E Electronics and Computer Engineering 1st year
+B.E Electronics and Computer Engineering 1st year student
+B.E Electronics and Computer Engineering 2nd year
+B.E Electronics and Computer Engineering 2nd year student
+B.E Electronics and Computer Engineering 3rd year
+B.E Electronics and Computer Engineering 3rd year student
+B.E Electronics and Computer Engineering 4th year
+B.E Electronics and Computer Engineering 4th year student
+BCA 1st year
+BCA 1st year student
+BCA 2nd year
+BCA 2nd year student
+BCA 3rd year
+BCA 3rd year student
+BCA 4th year
+BCA 4th year student
+Bachelor of Computer Applications 1st year
+Bachelor of Computer Applications 1st year student
+Bachelor of Computer Applications 2nd year
+Bachelor of Computer Applications 2nd year student
+Bachelor of Computer Applications 3rd year
+Bachelor of Computer Applications 3rd year student
+Bachelor of Computer Applications 4th year
+Bachelor of Computer Applications 4th year student
+B.Sc Computer Science 1st year
+B.Sc Computer Science 1st year student
+B.Sc Computer Science 2nd year
+B.Sc Computer Science 2nd year student
+B.Sc Computer Science 3rd year
+B.Sc Computer Science 3rd year student
+B.Sc Computer Science 4th year
+B.Sc Computer Science 4th year student
+B.Sc Information Technology 1st year
+B.Sc Information Technology 1st year student
+B.Sc Information Technology 2nd year
+B.Sc Information Technology 2nd year student
+B.Sc Information Technology 3rd year
+B.Sc Information Technology 3rd year student
+B.Sc Information Technology 4th year
+B.Sc Information Technology 4th year student
+B.Sc Computer Applications 1st year
+B.Sc Computer Applications 1st year student
+B.Sc Computer Applications 2nd year
+B.Sc Computer Applications 2nd year student
+B.Sc Computer Applications 3rd year
+B.Sc Computer Applications 3rd year student
+B.Sc Computer Applications 4th year
+B.Sc Computer Applications 4th year student
+B.Sc Data Science 1st year
+B.Sc Data Science 1st year student
+B.Sc Data Science 2nd year
+B.Sc Data Science 2nd year student
+B.Sc Data Science 3rd year
+B.Sc Data Science 3rd year student
+B.Sc Data Science 4th year
+B.Sc Data Science 4th year student
+B.Sc Artificial Intelligence 1st year
+B.Sc Artificial Intelligence 1st year student
+B.Sc Artificial Intelligence 2nd year
+B.Sc Artificial Intelligence 2nd year student
+B.Sc Artificial Intelligence 3rd year
+B.Sc Artificial Intelligence 3rd year student
+B.Sc Artificial Intelligence 4th year
+B.Sc Artificial Intelligence 4th year student
+B.Sc Cyber Security 1st year
+B.Sc Cyber Security 1st year student
+B.Sc Cyber Security 2nd year
+B.Sc Cyber Security 2nd year student
+B.Sc Cyber Security 3rd year
+B.Sc Cyber Security 3rd year student
+B.Sc Cyber Security 4th year
+B.Sc Cyber Security 4th year student
+B.Sc Software Development 1st year
+B.Sc Software Development 1st year student
+B.Sc Software Development 2nd year
+B.Sc Software Development 2nd year student
+B.Sc Software Development 3rd year
+B.Sc Software Development 3rd year student
+B.Sc Software Development 4th year
+B.Sc Software Development 4th year student
+MCA 1st year
+MCA 1st year student
+MCA 2nd year
+MCA 2nd year student
+MCA 3rd year
+MCA 3rd year student
+MCA 4th year
+MCA 4th year student
+Master of Computer Applications 1st year
+Master of Computer Applications 1st year student
+Master of Computer Applications 2nd year
+Master of Computer Applications 2nd year student
+Master of Computer Applications 3rd year
+Master of Computer Applications 3rd year student
+Master of Computer Applications 4th year
+Master of Computer Applications 4th year student
+M.Sc Computer Science 1st year
+M.Sc Computer Science 1st year student
+M.Sc Computer Science 2nd year
+M.Sc Computer Science 2nd year student
+M.Sc Computer Science 3rd year
+M.Sc Computer Science 3rd year student
+M.Sc Computer Science 4th year
+M.Sc Computer Science 4th year student
+M.Sc Information Technology 1st year
+M.Sc Information Technology 1st year student
+M.Sc Information Technology 2nd year
+M.Sc Information Technology 2nd year student
+M.Sc Information Technology 3rd year
+M.Sc Information Technology 3rd year student
+M.Sc Information Technology 4th year
+M.Sc Information Technology 4th year student
+M.Sc Data Science 1st year
+M.Sc Data Science 1st year student
+M.Sc Data Science 2nd year
+M.Sc Data Science 2nd year student
+M.Sc Data Science 3rd year
+M.Sc Data Science 3rd year student
+M.Sc Data Science 4th year
+M.Sc Data Science 4th year student
+M.Sc Artificial Intelligence 1st year
+M.Sc Artificial Intelligence 1st year student
+M.Sc Artificial Intelligence 2nd year
+M.Sc Artificial Intelligence 2nd year student
+M.Sc Artificial Intelligence 3rd year
+M.Sc Artificial Intelligence 3rd year student
+M.Sc Artificial Intelligence 4th year
+M.Sc Artificial Intelligence 4th year student
+M.Sc Cyber Security 1st year
+M.Sc Cyber Security 1st year student
+M.Sc Cyber Security 2nd year
+M.Sc Cyber Security 2nd year student
+M.Sc Cyber Security 3rd year
+M.Sc Cyber Security 3rd year student
+M.Sc Cyber Security 4th year
+M.Sc Cyber Security 4th year student
+Diploma Computer Science 1st year
+Diploma Computer Science 1st year student
+Diploma Computer Science 2nd year
+Diploma Computer Science 2nd year student
+Diploma Computer Science 3rd year
+Diploma Computer Science 3rd year student
+Diploma Computer Science 4th year
+Diploma Computer Science 4th year student
+Diploma Computer Engineering 1st year
+Diploma Computer Engineering 1st year student
+Diploma Computer Engineering 2nd year
+Diploma Computer Engineering 2nd year student
+Diploma Computer Engineering 3rd year
+Diploma Computer Engineering 3rd year student
+Diploma Computer Engineering 4th year
+Diploma Computer Engineering 4th year student
+Diploma Information Technology 1st year
+Diploma Information Technology 1st year student
+Diploma Information Technology 2nd year
+Diploma Information Technology 2nd year student
+Diploma Information Technology 3rd year
+Diploma Information Technology 3rd year student
+Diploma Information Technology 4th year
+Diploma Information Technology 4th year student
+Diploma Computer Technology 1st year
+Diploma Computer Technology 1st year student
+Diploma Computer Technology 2nd year
+Diploma Computer Technology 2nd year student
+Diploma Computer Technology 3rd year
+Diploma Computer Technology 3rd year student
+Diploma Computer Technology 4th year
+Diploma Computer Technology 4th year student
+Diploma Hardware and Networking 1st year
+Diploma Hardware and Networking 1st year student
+Diploma Hardware and Networking 2nd year
+Diploma Hardware and Networking 2nd year student
+Diploma Hardware and Networking 3rd year
+Diploma Hardware and Networking 3rd year student
+Diploma Hardware and Networking 4th year
+Diploma Hardware and Networking 4th year student
+Diploma Network Engineering 1st year
+Diploma Network Engineering 1st year student
+Diploma Network Engineering 2nd year
+Diploma Network Engineering 2nd year student
+Diploma Network Engineering 3rd year
+Diploma Network Engineering 3rd year student
+Diploma Network Engineering 4th year
+Diploma Network Engineering 4th year student
+
+IT2 - SECONDARY / OTHER IT AUDIENCE
+------------------------------------------------------------------------------------
+
+A. SOFTWARE / DATA / AI / SECURITY / DEVOPS / QA / OTHER IT ROLES
+
+Software Engineer
+Full Stack Developer
+Frontend Developer
+Backend Developer
+Web Developer
+Mobile App Developer
+Android Developer
+iOS Developer
+Java Developer
+Python Developer
+PHP Developer
+.NET Developer
+React Developer
+Node.js Developer
+Data Engineer
+Data Scientist
+AI Engineer
+Artificial Intelligence Engineer
+Machine Learning Engineer
+Business Intelligence Developer
+BI Developer
+Cybersecurity
+Cyber Security Analyst
+Security Analyst
+Security Engineer
+SOC Analyst
+SOC Engineer
+Ethical Hacker
+Penetration Tester
+Information Security Analyst
+Network Security Analyst
+Network Security Engineer
+Cloud Engineer
+AWS Cloud Engineer
+Azure Cloud Engineer
+DevOps Engineer
+DevOps Infrastructure Engineer
+Site Reliability Engineer
+Platform Engineer
+Cloud Operations Analyst
+QA Engineer
+Quality Assurance Engineer
+Test Engineer
+Automation Tester
+Database Administrator
+Database Engineer
+UI Designer
+UX Designer
+Blockchain Developer
+Game Developer
+Embedded Software Engineer
+IoT Engineer
+
+B. IT2 FRESHER / ENTRY-LEVEL / JUNIOR ROLE VARIANTS
+
+fresher Cloud Engineer
+entry level Cloud Engineer
+junior Cloud Engineer
+fresher Software Engineer
+entry level Software Engineer
+junior Software Engineer
+fresher Full Stack Developer
+entry level Full Stack Developer
+junior Full Stack Developer
+fresher Frontend Developer
+entry level Frontend Developer
+junior Frontend Developer
+fresher Backend Developer
+entry level Backend Developer
+junior Backend Developer
+fresher Java Developer
+entry level Java Developer
+junior Java Developer
+fresher Python Developer
+entry level Python Developer
+junior Python Developer
+fresher Android Developer
+entry level Android Developer
+junior Android Developer
+fresher iOS Developer
+entry level iOS Developer
+junior iOS Developer
+fresher Data Engineer
+entry level Data Engineer
+junior Data Engineer
+fresher Data Scientist
+entry level Data Scientist
+junior Data Scientist
+fresher AI Engineer
+entry level AI Engineer
+junior AI Engineer
+fresher Machine Learning Engineer
+entry level Machine Learning Engineer
+junior Machine Learning Engineer
+fresher Cybersecurity
+entry level Cybersecurity
+junior Cybersecurity
+fresher Security Analyst
+entry level Security Analyst
+junior Security Analyst
+fresher Security Engineer
+entry level Security Engineer
+junior Security Engineer
+fresher Ethical Hacker
+entry level Ethical Hacker
+junior Ethical Hacker
+fresher Network Security Engineer
+entry level Network Security Engineer
+junior Network Security Engineer
+fresher DevOps Engineer
+entry level DevOps Engineer
+junior DevOps Engineer
+fresher Site Reliability Engineer
+entry level Site Reliability Engineer
+junior Site Reliability Engineer
+fresher Platform Engineer
+entry level Platform Engineer
+junior Platform Engineer
+fresher QA Engineer
+entry level QA Engineer
+junior QA Engineer
+fresher Test Engineer
+entry level Test Engineer
+junior Test Engineer
+fresher Database Administrator
+entry level Database Administrator
+junior Database Administrator
+fresher Blockchain Developer
+entry level Blockchain Developer
+junior Blockchain Developer
+fresher Embedded Software Engineer
+entry level Embedded Software Engineer
+junior Embedded Software Engineer
+fresher IoT Engineer
+entry level IoT Engineer
+junior IoT Engineer
+fresher Web Developer
+entry level Web Developer
+junior Web Developer
+fresher Mobile App Developer
+entry level Mobile App Developer
+junior Mobile App Developer
+fresher UI Designer
+entry level UI Designer
+junior UI Designer
+fresher UX Designer
+entry level UX Designer
+junior UX Designer
+fresher AWS Cloud Engineer
+entry level AWS Cloud Engineer
+junior AWS Cloud Engineer
+fresher Azure Cloud Engineer
+entry level Azure Cloud Engineer
+junior Azure Cloud Engineer
+fresher Business Intelligence Developer
+entry level Business Intelligence Developer
+junior Business Intelligence Developer
+fresher Database Engineer
+entry level Database Engineer
+junior Database Engineer
+fresher Quality Assurance Engineer
+entry level Quality Assurance Engineer
+junior Quality Assurance Engineer
+fresher Automation Tester
+entry level Automation Tester
+junior Automation Tester
+fresher Game Developer
+entry level Game Developer
+junior Game Developer
+fresher Penetration Tester
+entry level Penetration Tester
+junior Penetration Tester
+fresher SOC Analyst
+entry level SOC Analyst
+junior SOC Analyst
+fresher SOC Engineer
+entry level SOC Engineer
+junior SOC Engineer
+fresher Information Security Analyst
+entry level Information Security Analyst
+junior Information Security Analyst
+fresher Cyber Security Analyst
+entry level Cyber Security Analyst
+junior Cyber Security Analyst
+fresher React Developer
+entry level React Developer
+junior React Developer
+fresher Node.js Developer
+entry level Node.js Developer
+junior Node.js Developer
+fresher PHP Developer
+entry level PHP Developer
+junior PHP Developer
+fresher .NET Developer
+entry level .NET Developer
+junior .NET Developer
+
+====================================================================================
+
+C. IT2 JOB ROLE + 1-3 YEAR EXPERIENCE VARIANTS
+
+Software Engineer 1 year experience
+Software Engineer 1+ year experience
+Software Engineer 1+ years experience
+Software Engineer 2 years experience
+Software Engineer 2+ years experience
+Software Engineer 3 years experience
+Software Engineer 3+ years experience
+Software Engineer 1-3 years experience
+Software Engineer 1 to 3 years experience
+Full Stack Developer 1 year experience
+Full Stack Developer 1+ year experience
+Full Stack Developer 1+ years experience
+Full Stack Developer 2 years experience
+Full Stack Developer 2+ years experience
+Full Stack Developer 3 years experience
+Full Stack Developer 3+ years experience
+Full Stack Developer 1-3 years experience
+Full Stack Developer 1 to 3 years experience
+Frontend Developer 1 year experience
+Frontend Developer 1+ year experience
+Frontend Developer 1+ years experience
+Frontend Developer 2 years experience
+Frontend Developer 2+ years experience
+Frontend Developer 3 years experience
+Frontend Developer 3+ years experience
+Frontend Developer 1-3 years experience
+Frontend Developer 1 to 3 years experience
+Backend Developer 1 year experience
+Backend Developer 1+ year experience
+Backend Developer 1+ years experience
+Backend Developer 2 years experience
+Backend Developer 2+ years experience
+Backend Developer 3 years experience
+Backend Developer 3+ years experience
+Backend Developer 1-3 years experience
+Backend Developer 1 to 3 years experience
+Web Developer 1 year experience
+Web Developer 1+ year experience
+Web Developer 1+ years experience
+Web Developer 2 years experience
+Web Developer 2+ years experience
+Web Developer 3 years experience
+Web Developer 3+ years experience
+Web Developer 1-3 years experience
+Web Developer 1 to 3 years experience
+Mobile App Developer 1 year experience
+Mobile App Developer 1+ year experience
+Mobile App Developer 1+ years experience
+Mobile App Developer 2 years experience
+Mobile App Developer 2+ years experience
+Mobile App Developer 3 years experience
+Mobile App Developer 3+ years experience
+Mobile App Developer 1-3 years experience
+Mobile App Developer 1 to 3 years experience
+Android Developer 1 year experience
+Android Developer 1+ year experience
+Android Developer 1+ years experience
+Android Developer 2 years experience
+Android Developer 2+ years experience
+Android Developer 3 years experience
+Android Developer 3+ years experience
+Android Developer 1-3 years experience
+Android Developer 1 to 3 years experience
+iOS Developer 1 year experience
+iOS Developer 1+ year experience
+iOS Developer 1+ years experience
+iOS Developer 2 years experience
+iOS Developer 2+ years experience
+iOS Developer 3 years experience
+iOS Developer 3+ years experience
+iOS Developer 1-3 years experience
+iOS Developer 1 to 3 years experience
+Java Developer 1 year experience
+Java Developer 1+ year experience
+Java Developer 1+ years experience
+Java Developer 2 years experience
+Java Developer 2+ years experience
+Java Developer 3 years experience
+Java Developer 3+ years experience
+Java Developer 1-3 years experience
+Java Developer 1 to 3 years experience
+Python Developer 1 year experience
+Python Developer 1+ year experience
+Python Developer 1+ years experience
+Python Developer 2 years experience
+Python Developer 2+ years experience
+Python Developer 3 years experience
+Python Developer 3+ years experience
+Python Developer 1-3 years experience
+Python Developer 1 to 3 years experience
+PHP Developer 1 year experience
+PHP Developer 1+ year experience
+PHP Developer 1+ years experience
+PHP Developer 2 years experience
+PHP Developer 2+ years experience
+PHP Developer 3 years experience
+PHP Developer 3+ years experience
+PHP Developer 1-3 years experience
+PHP Developer 1 to 3 years experience
+.NET Developer 1 year experience
+.NET Developer 1+ year experience
+.NET Developer 1+ years experience
+.NET Developer 2 years experience
+.NET Developer 2+ years experience
+.NET Developer 3 years experience
+.NET Developer 3+ years experience
+.NET Developer 1-3 years experience
+.NET Developer 1 to 3 years experience
+React Developer 1 year experience
+React Developer 1+ year experience
+React Developer 1+ years experience
+React Developer 2 years experience
+React Developer 2+ years experience
+React Developer 3 years experience
+React Developer 3+ years experience
+React Developer 1-3 years experience
+React Developer 1 to 3 years experience
+Node.js Developer 1 year experience
+Node.js Developer 1+ year experience
+Node.js Developer 1+ years experience
+Node.js Developer 2 years experience
+Node.js Developer 2+ years experience
+Node.js Developer 3 years experience
+Node.js Developer 3+ years experience
+Node.js Developer 1-3 years experience
+Node.js Developer 1 to 3 years experience
+Data Engineer 1 year experience
+Data Engineer 1+ year experience
+Data Engineer 1+ years experience
+Data Engineer 2 years experience
+Data Engineer 2+ years experience
+Data Engineer 3 years experience
+Data Engineer 3+ years experience
+Data Engineer 1-3 years experience
+Data Engineer 1 to 3 years experience
+Data Scientist 1 year experience
+Data Scientist 1+ year experience
+Data Scientist 1+ years experience
+Data Scientist 2 years experience
+Data Scientist 2+ years experience
+Data Scientist 3 years experience
+Data Scientist 3+ years experience
+Data Scientist 1-3 years experience
+Data Scientist 1 to 3 years experience
+AI Engineer 1 year experience
+AI Engineer 1+ year experience
+AI Engineer 1+ years experience
+AI Engineer 2 years experience
+AI Engineer 2+ years experience
+AI Engineer 3 years experience
+AI Engineer 3+ years experience
+AI Engineer 1-3 years experience
+AI Engineer 1 to 3 years experience
+Artificial Intelligence Engineer 1 year experience
+Artificial Intelligence Engineer 1+ year experience
+Artificial Intelligence Engineer 1+ years experience
+Artificial Intelligence Engineer 2 years experience
+Artificial Intelligence Engineer 2+ years experience
+Artificial Intelligence Engineer 3 years experience
+Artificial Intelligence Engineer 3+ years experience
+Artificial Intelligence Engineer 1-3 years experience
+Artificial Intelligence Engineer 1 to 3 years experience
+Machine Learning Engineer 1 year experience
+Machine Learning Engineer 1+ year experience
+Machine Learning Engineer 1+ years experience
+Machine Learning Engineer 2 years experience
+Machine Learning Engineer 2+ years experience
+Machine Learning Engineer 3 years experience
+Machine Learning Engineer 3+ years experience
+Machine Learning Engineer 1-3 years experience
+Machine Learning Engineer 1 to 3 years experience
+Business Intelligence Developer 1 year experience
+Business Intelligence Developer 1+ year experience
+Business Intelligence Developer 1+ years experience
+Business Intelligence Developer 2 years experience
+Business Intelligence Developer 2+ years experience
+Business Intelligence Developer 3 years experience
+Business Intelligence Developer 3+ years experience
+Business Intelligence Developer 1-3 years experience
+Business Intelligence Developer 1 to 3 years experience
+BI Developer 1 year experience
+BI Developer 1+ year experience
+BI Developer 1+ years experience
+BI Developer 2 years experience
+BI Developer 2+ years experience
+BI Developer 3 years experience
+BI Developer 3+ years experience
+BI Developer 1-3 years experience
+BI Developer 1 to 3 years experience
+Cybersecurity 1 year experience
+Cybersecurity 1+ year experience
+Cybersecurity 1+ years experience
+Cybersecurity 2 years experience
+Cybersecurity 2+ years experience
+Cybersecurity 3 years experience
+Cybersecurity 3+ years experience
+Cybersecurity 1-3 years experience
+Cybersecurity 1 to 3 years experience
+Cyber Security Analyst 1 year experience
+Cyber Security Analyst 1+ year experience
+Cyber Security Analyst 1+ years experience
+Cyber Security Analyst 2 years experience
+Cyber Security Analyst 2+ years experience
+Cyber Security Analyst 3 years experience
+Cyber Security Analyst 3+ years experience
+Cyber Security Analyst 1-3 years experience
+Cyber Security Analyst 1 to 3 years experience
+Security Analyst 1 year experience
+Security Analyst 1+ year experience
+Security Analyst 1+ years experience
+Security Analyst 2 years experience
+Security Analyst 2+ years experience
+Security Analyst 3 years experience
+Security Analyst 3+ years experience
+Security Analyst 1-3 years experience
+Security Analyst 1 to 3 years experience
+Security Engineer 1 year experience
+Security Engineer 1+ year experience
+Security Engineer 1+ years experience
+Security Engineer 2 years experience
+Security Engineer 2+ years experience
+Security Engineer 3 years experience
+Security Engineer 3+ years experience
+Security Engineer 1-3 years experience
+Security Engineer 1 to 3 years experience
+SOC Analyst 1 year experience
+SOC Analyst 1+ year experience
+SOC Analyst 1+ years experience
+SOC Analyst 2 years experience
+SOC Analyst 2+ years experience
+SOC Analyst 3 years experience
+SOC Analyst 3+ years experience
+SOC Analyst 1-3 years experience
+SOC Analyst 1 to 3 years experience
+SOC Engineer 1 year experience
+SOC Engineer 1+ year experience
+SOC Engineer 1+ years experience
+SOC Engineer 2 years experience
+SOC Engineer 2+ years experience
+SOC Engineer 3 years experience
+SOC Engineer 3+ years experience
+SOC Engineer 1-3 years experience
+SOC Engineer 1 to 3 years experience
+Ethical Hacker 1 year experience
+Ethical Hacker 1+ year experience
+Ethical Hacker 1+ years experience
+Ethical Hacker 2 years experience
+Ethical Hacker 2+ years experience
+Ethical Hacker 3 years experience
+Ethical Hacker 3+ years experience
+Ethical Hacker 1-3 years experience
+Ethical Hacker 1 to 3 years experience
+Penetration Tester 1 year experience
+Penetration Tester 1+ year experience
+Penetration Tester 1+ years experience
+Penetration Tester 2 years experience
+Penetration Tester 2+ years experience
+Penetration Tester 3 years experience
+Penetration Tester 3+ years experience
+Penetration Tester 1-3 years experience
+Penetration Tester 1 to 3 years experience
+Information Security Analyst 1 year experience
+Information Security Analyst 1+ year experience
+Information Security Analyst 1+ years experience
+Information Security Analyst 2 years experience
+Information Security Analyst 2+ years experience
+Information Security Analyst 3 years experience
+Information Security Analyst 3+ years experience
+Information Security Analyst 1-3 years experience
+Information Security Analyst 1 to 3 years experience
+Network Security Analyst 1 year experience
+Network Security Analyst 1+ year experience
+Network Security Analyst 1+ years experience
+Network Security Analyst 2 years experience
+Network Security Analyst 2+ years experience
+Network Security Analyst 3 years experience
+Network Security Analyst 3+ years experience
+Network Security Analyst 1-3 years experience
+Network Security Analyst 1 to 3 years experience
+Network Security Engineer 1 year experience
+Network Security Engineer 1+ year experience
+Network Security Engineer 1+ years experience
+Network Security Engineer 2 years experience
+Network Security Engineer 2+ years experience
+Network Security Engineer 3 years experience
+Network Security Engineer 3+ years experience
+Network Security Engineer 1-3 years experience
+Network Security Engineer 1 to 3 years experience
+Cloud Engineer 1 year experience
+Cloud Engineer 1+ year experience
+Cloud Engineer 1+ years experience
+Cloud Engineer 2 years experience
+Cloud Engineer 2+ years experience
+Cloud Engineer 3 years experience
+Cloud Engineer 3+ years experience
+Cloud Engineer 1-3 years experience
+Cloud Engineer 1 to 3 years experience
+AWS Cloud Engineer 1 year experience
+AWS Cloud Engineer 1+ year experience
+AWS Cloud Engineer 1+ years experience
+AWS Cloud Engineer 2 years experience
+AWS Cloud Engineer 2+ years experience
+AWS Cloud Engineer 3 years experience
+AWS Cloud Engineer 3+ years experience
+AWS Cloud Engineer 1-3 years experience
+AWS Cloud Engineer 1 to 3 years experience
+Azure Cloud Engineer 1 year experience
+Azure Cloud Engineer 1+ year experience
+Azure Cloud Engineer 1+ years experience
+Azure Cloud Engineer 2 years experience
+Azure Cloud Engineer 2+ years experience
+Azure Cloud Engineer 3 years experience
+Azure Cloud Engineer 3+ years experience
+Azure Cloud Engineer 1-3 years experience
+Azure Cloud Engineer 1 to 3 years experience
+DevOps Engineer 1 year experience
+DevOps Engineer 1+ year experience
+DevOps Engineer 1+ years experience
+DevOps Engineer 2 years experience
+DevOps Engineer 2+ years experience
+DevOps Engineer 3 years experience
+DevOps Engineer 3+ years experience
+DevOps Engineer 1-3 years experience
+DevOps Engineer 1 to 3 years experience
+DevOps Infrastructure Engineer 1 year experience
+DevOps Infrastructure Engineer 1+ year experience
+DevOps Infrastructure Engineer 1+ years experience
+DevOps Infrastructure Engineer 2 years experience
+DevOps Infrastructure Engineer 2+ years experience
+DevOps Infrastructure Engineer 3 years experience
+DevOps Infrastructure Engineer 3+ years experience
+DevOps Infrastructure Engineer 1-3 years experience
+DevOps Infrastructure Engineer 1 to 3 years experience
+Site Reliability Engineer 1 year experience
+Site Reliability Engineer 1+ year experience
+Site Reliability Engineer 1+ years experience
+Site Reliability Engineer 2 years experience
+Site Reliability Engineer 2+ years experience
+Site Reliability Engineer 3 years experience
+Site Reliability Engineer 3+ years experience
+Site Reliability Engineer 1-3 years experience
+Site Reliability Engineer 1 to 3 years experience
+Platform Engineer 1 year experience
+Platform Engineer 1+ year experience
+Platform Engineer 1+ years experience
+Platform Engineer 2 years experience
+Platform Engineer 2+ years experience
+Platform Engineer 3 years experience
+Platform Engineer 3+ years experience
+Platform Engineer 1-3 years experience
+Platform Engineer 1 to 3 years experience
+Cloud Operations Analyst 1 year experience
+Cloud Operations Analyst 1+ year experience
+Cloud Operations Analyst 1+ years experience
+Cloud Operations Analyst 2 years experience
+Cloud Operations Analyst 2+ years experience
+Cloud Operations Analyst 3 years experience
+Cloud Operations Analyst 3+ years experience
+Cloud Operations Analyst 1-3 years experience
+Cloud Operations Analyst 1 to 3 years experience
+QA Engineer 1 year experience
+QA Engineer 1+ year experience
+QA Engineer 1+ years experience
+QA Engineer 2 years experience
+QA Engineer 2+ years experience
+QA Engineer 3 years experience
+QA Engineer 3+ years experience
+QA Engineer 1-3 years experience
+QA Engineer 1 to 3 years experience
+Quality Assurance Engineer 1 year experience
+Quality Assurance Engineer 1+ year experience
+Quality Assurance Engineer 1+ years experience
+Quality Assurance Engineer 2 years experience
+Quality Assurance Engineer 2+ years experience
+Quality Assurance Engineer 3 years experience
+Quality Assurance Engineer 3+ years experience
+Quality Assurance Engineer 1-3 years experience
+Quality Assurance Engineer 1 to 3 years experience
+Test Engineer 1 year experience
+Test Engineer 1+ year experience
+Test Engineer 1+ years experience
+Test Engineer 2 years experience
+Test Engineer 2+ years experience
+Test Engineer 3 years experience
+Test Engineer 3+ years experience
+Test Engineer 1-3 years experience
+Test Engineer 1 to 3 years experience
+Automation Tester 1 year experience
+Automation Tester 1+ year experience
+Automation Tester 1+ years experience
+Automation Tester 2 years experience
+Automation Tester 2+ years experience
+Automation Tester 3 years experience
+Automation Tester 3+ years experience
+Automation Tester 1-3 years experience
+Automation Tester 1 to 3 years experience
+Database Administrator 1 year experience
+Database Administrator 1+ year experience
+Database Administrator 1+ years experience
+Database Administrator 2 years experience
+Database Administrator 2+ years experience
+Database Administrator 3 years experience
+Database Administrator 3+ years experience
+Database Administrator 1-3 years experience
+Database Administrator 1 to 3 years experience
+Database Engineer 1 year experience
+Database Engineer 1+ year experience
+Database Engineer 1+ years experience
+Database Engineer 2 years experience
+Database Engineer 2+ years experience
+Database Engineer 3 years experience
+Database Engineer 3+ years experience
+Database Engineer 1-3 years experience
+Database Engineer 1 to 3 years experience
+UI Designer 1 year experience
+UI Designer 1+ year experience
+UI Designer 1+ years experience
+UI Designer 2 years experience
+UI Designer 2+ years experience
+UI Designer 3 years experience
+UI Designer 3+ years experience
+UI Designer 1-3 years experience
+UI Designer 1 to 3 years experience
+UX Designer 1 year experience
+UX Designer 1+ year experience
+UX Designer 1+ years experience
+UX Designer 2 years experience
+UX Designer 2+ years experience
+UX Designer 3 years experience
+UX Designer 3+ years experience
+UX Designer 1-3 years experience
+UX Designer 1 to 3 years experience
+Blockchain Developer 1 year experience
+Blockchain Developer 1+ year experience
+Blockchain Developer 1+ years experience
+Blockchain Developer 2 years experience
+Blockchain Developer 2+ years experience
+Blockchain Developer 3 years experience
+Blockchain Developer 3+ years experience
+Blockchain Developer 1-3 years experience
+Blockchain Developer 1 to 3 years experience
+Game Developer 1 year experience
+Game Developer 1+ year experience
+Game Developer 1+ years experience
+Game Developer 2 years experience
+Game Developer 2+ years experience
+Game Developer 3 years experience
+Game Developer 3+ years experience
+Game Developer 1-3 years experience
+Game Developer 1 to 3 years experience
+Embedded Software Engineer 1 year experience
+Embedded Software Engineer 1+ year experience
+Embedded Software Engineer 1+ years experience
+Embedded Software Engineer 2 years experience
+Embedded Software Engineer 2+ years experience
+Embedded Software Engineer 3 years experience
+Embedded Software Engineer 3+ years experience
+Embedded Software Engineer 1-3 years experience
+Embedded Software Engineer 1 to 3 years experience
+IoT Engineer 1 year experience
+IoT Engineer 1+ year experience
+IoT Engineer 1+ years experience
+IoT Engineer 2 years experience
+IoT Engineer 2+ years experience
+IoT Engineer 3 years experience
+IoT Engineer 3+ years experience
+IoT Engineer 1-3 years experience
+IoT Engineer 1 to 3 years experience
+
+CATEGORY 2 - OTHER / NON-IT ENGINEERING AUDIENCE
+====================================================================================
+
+------------------------------------------------------------------------------------
+CATEGORY 2
+------------------------------------------------------------------------------------
+
+A. ENGINEERING AND DIPLOMA BRANCHES
+
+Mechanical Engineering
+Civil Engineering
+Electrical Engineering
+Electrical and Electronics Engineering
+Electronics Engineering
+Electronics and Communication Engineering
+Electronics and Telecommunication Engineering
+Electronics and Instrumentation Engineering
+Instrumentation Engineering
+Instrumentation and Control Engineering
+Automobile Engineering
+Automotive Engineering
+Production Engineering
+Industrial Engineering
+Manufacturing Engineering
+Mechatronics Engineering
+Chemical Engineering
+Petrochemical Engineering
+Petroleum Engineering
+Aeronautical Engineering
+Aerospace Engineering
+Marine Engineering
+Naval Architecture
+Mining Engineering
+Metallurgical Engineering
+Materials Engineering
+Biomedical Engineering
+Biotechnology Engineering
+Agricultural Engineering
+Food Technology
+Food Engineering
+Environmental Engineering
+Energy Engineering
+Power Engineering
+Textile Engineering
+Printing Technology
+Robotics Engineering
+Automation Engineering
+Construction Engineering
+Structural Engineering
+Ceramic Engineering
+Polymer Engineering
+Plastic Engineering
+Diploma Mechanical Engineering
+Diploma Civil Engineering
+Diploma Electrical Engineering
+Diploma Electrical and Electronics Engineering
+Diploma Electronics Engineering
+Diploma Electronics and Communication Engineering
+Diploma Electronics and Telecommunication Engineering
+Diploma Instrumentation Engineering
+Diploma Automobile Engineering
+Diploma Production Engineering
+Diploma Industrial Engineering
+Diploma Manufacturing Engineering
+Diploma Mechatronics Engineering
+Diploma Chemical Engineering
+Diploma Petrochemical Engineering
+Diploma Aeronautical Engineering
+Diploma Mining Engineering
+Diploma Metallurgical Engineering
+Diploma Biomedical Engineering
+Diploma Agricultural Engineering
+Diploma Food Technology
+Diploma Environmental Engineering
+Diploma Textile Engineering
+Diploma Printing Technology
+Diploma Robotics
+Diploma Automation
+
+B. NON-IT ENGINEERING + ACADEMIC-YEAR VARIANTS
+
+Mechanical Engineering first year student
+Mechanical Engineering second year student
+Mechanical Engineering third year student
+Mechanical Engineering fourth year student
+Mechanical Engineering pre-final year student
+Mechanical Engineering final year student
+Civil Engineering first year student
+Civil Engineering second year student
+Civil Engineering third year student
+Civil Engineering fourth year student
+Civil Engineering pre-final year student
+Civil Engineering final year student
+Electrical Engineering first year student
+Electrical Engineering second year student
+Electrical Engineering third year student
+Electrical Engineering fourth year student
+Electrical Engineering pre-final year student
+Electrical Engineering final year student
+Electrical and Electronics Engineering first year student
+Electrical and Electronics Engineering second year student
+Electrical and Electronics Engineering third year student
+Electrical and Electronics Engineering fourth year student
+Electrical and Electronics Engineering pre-final year student
+Electrical and Electronics Engineering final year student
+Electronics Engineering first year student
+Electronics Engineering second year student
+Electronics Engineering third year student
+Electronics Engineering fourth year student
+Electronics Engineering pre-final year student
+Electronics Engineering final year student
+Electronics and Communication Engineering first year student
+Electronics and Communication Engineering second year student
+Electronics and Communication Engineering third year student
+Electronics and Communication Engineering fourth year student
+Electronics and Communication Engineering pre-final year student
+Electronics and Communication Engineering final year student
+Electronics and Telecommunication Engineering first year student
+Electronics and Telecommunication Engineering second year student
+Electronics and Telecommunication Engineering third year student
+Electronics and Telecommunication Engineering fourth year student
+Electronics and Telecommunication Engineering pre-final year student
+Electronics and Telecommunication Engineering final year student
+Electronics and Instrumentation Engineering first year student
+Electronics and Instrumentation Engineering second year student
+Electronics and Instrumentation Engineering third year student
+Electronics and Instrumentation Engineering fourth year student
+Electronics and Instrumentation Engineering pre-final year student
+Electronics and Instrumentation Engineering final year student
+Instrumentation Engineering first year student
+Instrumentation Engineering second year student
+Instrumentation Engineering third year student
+Instrumentation Engineering fourth year student
+Instrumentation Engineering pre-final year student
+Instrumentation Engineering final year student
+Instrumentation and Control Engineering first year student
+Instrumentation and Control Engineering second year student
+Instrumentation and Control Engineering third year student
+Instrumentation and Control Engineering fourth year student
+Instrumentation and Control Engineering pre-final year student
+Instrumentation and Control Engineering final year student
+Automobile Engineering first year student
+Automobile Engineering second year student
+Automobile Engineering third year student
+Automobile Engineering fourth year student
+Automobile Engineering pre-final year student
+Automobile Engineering final year student
+Automotive Engineering first year student
+Automotive Engineering second year student
+Automotive Engineering third year student
+Automotive Engineering fourth year student
+Automotive Engineering pre-final year student
+Automotive Engineering final year student
+Production Engineering first year student
+Production Engineering second year student
+Production Engineering third year student
+Production Engineering fourth year student
+Production Engineering pre-final year student
+Production Engineering final year student
+Industrial Engineering first year student
+Industrial Engineering second year student
+Industrial Engineering third year student
+Industrial Engineering fourth year student
+Industrial Engineering pre-final year student
+Industrial Engineering final year student
+Manufacturing Engineering first year student
+Manufacturing Engineering second year student
+Manufacturing Engineering third year student
+Manufacturing Engineering fourth year student
+Manufacturing Engineering pre-final year student
+Manufacturing Engineering final year student
+Mechatronics Engineering first year student
+Mechatronics Engineering second year student
+Mechatronics Engineering third year student
+Mechatronics Engineering fourth year student
+Mechatronics Engineering pre-final year student
+Mechatronics Engineering final year student
+Chemical Engineering first year student
+Chemical Engineering second year student
+Chemical Engineering third year student
+Chemical Engineering fourth year student
+Chemical Engineering pre-final year student
+Chemical Engineering final year student
+Petrochemical Engineering first year student
+Petrochemical Engineering second year student
+Petrochemical Engineering third year student
+Petrochemical Engineering fourth year student
+Petrochemical Engineering pre-final year student
+Petrochemical Engineering final year student
+Petroleum Engineering first year student
+Petroleum Engineering second year student
+Petroleum Engineering third year student
+Petroleum Engineering fourth year student
+Petroleum Engineering pre-final year student
+Petroleum Engineering final year student
+Aeronautical Engineering first year student
+Aeronautical Engineering second year student
+Aeronautical Engineering third year student
+Aeronautical Engineering fourth year student
+Aeronautical Engineering pre-final year student
+Aeronautical Engineering final year student
+Aerospace Engineering first year student
+Aerospace Engineering second year student
+Aerospace Engineering third year student
+Aerospace Engineering fourth year student
+Aerospace Engineering pre-final year student
+Aerospace Engineering final year student
+Marine Engineering first year student
+Marine Engineering second year student
+Marine Engineering third year student
+Marine Engineering fourth year student
+Marine Engineering pre-final year student
+Marine Engineering final year student
+Naval Architecture first year student
+Naval Architecture second year student
+Naval Architecture third year student
+Naval Architecture fourth year student
+Naval Architecture pre-final year student
+Naval Architecture final year student
+Mining Engineering first year student
+Mining Engineering second year student
+Mining Engineering third year student
+Mining Engineering fourth year student
+Mining Engineering pre-final year student
+Mining Engineering final year student
+Metallurgical Engineering first year student
+Metallurgical Engineering second year student
+Metallurgical Engineering third year student
+Metallurgical Engineering fourth year student
+Metallurgical Engineering pre-final year student
+Metallurgical Engineering final year student
+Materials Engineering first year student
+Materials Engineering second year student
+Materials Engineering third year student
+Materials Engineering fourth year student
+Materials Engineering pre-final year student
+Materials Engineering final year student
+Biomedical Engineering first year student
+Biomedical Engineering second year student
+Biomedical Engineering third year student
+Biomedical Engineering fourth year student
+Biomedical Engineering pre-final year student
+Biomedical Engineering final year student
+Biotechnology Engineering first year student
+Biotechnology Engineering second year student
+Biotechnology Engineering third year student
+Biotechnology Engineering fourth year student
+Biotechnology Engineering pre-final year student
+Biotechnology Engineering final year student
+Agricultural Engineering first year student
+Agricultural Engineering second year student
+Agricultural Engineering third year student
+Agricultural Engineering fourth year student
+Agricultural Engineering pre-final year student
+Agricultural Engineering final year student
+Food Technology first year student
+Food Technology second year student
+Food Technology third year student
+Food Technology fourth year student
+Food Technology pre-final year student
+Food Technology final year student
+Food Engineering first year student
+Food Engineering second year student
+Food Engineering third year student
+Food Engineering fourth year student
+Food Engineering pre-final year student
+Food Engineering final year student
+Environmental Engineering first year student
+Environmental Engineering second year student
+Environmental Engineering third year student
+Environmental Engineering fourth year student
+Environmental Engineering pre-final year student
+Environmental Engineering final year student
+Energy Engineering first year student
+Energy Engineering second year student
+Energy Engineering third year student
+Energy Engineering fourth year student
+Energy Engineering pre-final year student
+Energy Engineering final year student
+Power Engineering first year student
+Power Engineering second year student
+Power Engineering third year student
+Power Engineering fourth year student
+Power Engineering pre-final year student
+Power Engineering final year student
+Textile Engineering first year student
+Textile Engineering second year student
+Textile Engineering third year student
+Textile Engineering fourth year student
+Textile Engineering pre-final year student
+Textile Engineering final year student
+Printing Technology first year student
+Printing Technology second year student
+Printing Technology third year student
+Printing Technology fourth year student
+Printing Technology pre-final year student
+Printing Technology final year student
+Robotics Engineering first year student
+Robotics Engineering second year student
+Robotics Engineering third year student
+Robotics Engineering fourth year student
+Robotics Engineering pre-final year student
+Robotics Engineering final year student
+Automation Engineering first year student
+Automation Engineering second year student
+Automation Engineering third year student
+Automation Engineering fourth year student
+Automation Engineering pre-final year student
+Automation Engineering final year student
+Construction Engineering first year student
+Construction Engineering second year student
+Construction Engineering third year student
+Construction Engineering fourth year student
+Construction Engineering pre-final year student
+Construction Engineering final year student
+Structural Engineering first year student
+Structural Engineering second year student
+Structural Engineering third year student
+Structural Engineering fourth year student
+Structural Engineering pre-final year student
+Structural Engineering final year student
+Ceramic Engineering first year student
+Ceramic Engineering second year student
+Ceramic Engineering third year student
+Ceramic Engineering fourth year student
+Ceramic Engineering pre-final year student
+Ceramic Engineering final year student
+Polymer Engineering first year student
+Polymer Engineering second year student
+Polymer Engineering third year student
+Polymer Engineering fourth year student
+Polymer Engineering pre-final year student
+Polymer Engineering final year student
+Plastic Engineering first year student
+Plastic Engineering second year student
+Plastic Engineering third year student
+Plastic Engineering fourth year student
+Plastic Engineering pre-final year student
+Plastic Engineering final year student
+Diploma Mechanical Engineering final year student
+Diploma Civil Engineering final year student
+Diploma Electrical Engineering final year student
+Diploma Electronics Engineering final year student
+Diploma Automobile Engineering final year student
+Diploma Production Engineering final year student
+Diploma Mechatronics Engineering final year student
+Diploma Chemical Engineering final year student
+Diploma Aeronautical Engineering final year student
+Diploma Biomedical Engineering final year student
+Diploma Agricultural Engineering final year student
+Diploma Food Technology final year student
+Diploma Environmental Engineering final year student
+Diploma Textile Engineering final year student
+Diploma Robotics final year student
+Diploma Automation final year student
+
+====================================================================================
+
+C. CATEGORY 2 BRANCH / DIPLOMA + ORDINAL ACADEMIC-YEAR VARIANTS
+
+Mechanical Engineering 1st year
+Mechanical Engineering 1st year student
+Mechanical Engineering 2nd year
+Mechanical Engineering 2nd year student
+Mechanical Engineering 3rd year
+Mechanical Engineering 3rd year student
+Mechanical Engineering 4th year
+Mechanical Engineering 4th year student
+Civil Engineering 1st year
+Civil Engineering 1st year student
+Civil Engineering 2nd year
+Civil Engineering 2nd year student
+Civil Engineering 3rd year
+Civil Engineering 3rd year student
+Civil Engineering 4th year
+Civil Engineering 4th year student
+Electrical Engineering 1st year
+Electrical Engineering 1st year student
+Electrical Engineering 2nd year
+Electrical Engineering 2nd year student
+Electrical Engineering 3rd year
+Electrical Engineering 3rd year student
+Electrical Engineering 4th year
+Electrical Engineering 4th year student
+Electrical and Electronics Engineering 1st year
+Electrical and Electronics Engineering 1st year student
+Electrical and Electronics Engineering 2nd year
+Electrical and Electronics Engineering 2nd year student
+Electrical and Electronics Engineering 3rd year
+Electrical and Electronics Engineering 3rd year student
+Electrical and Electronics Engineering 4th year
+Electrical and Electronics Engineering 4th year student
+Electronics Engineering 1st year
+Electronics Engineering 1st year student
+Electronics Engineering 2nd year
+Electronics Engineering 2nd year student
+Electronics Engineering 3rd year
+Electronics Engineering 3rd year student
+Electronics Engineering 4th year
+Electronics Engineering 4th year student
+Electronics and Communication Engineering 1st year
+Electronics and Communication Engineering 1st year student
+Electronics and Communication Engineering 2nd year
+Electronics and Communication Engineering 2nd year student
+Electronics and Communication Engineering 3rd year
+Electronics and Communication Engineering 3rd year student
+Electronics and Communication Engineering 4th year
+Electronics and Communication Engineering 4th year student
+Electronics and Telecommunication Engineering 1st year
+Electronics and Telecommunication Engineering 1st year student
+Electronics and Telecommunication Engineering 2nd year
+Electronics and Telecommunication Engineering 2nd year student
+Electronics and Telecommunication Engineering 3rd year
+Electronics and Telecommunication Engineering 3rd year student
+Electronics and Telecommunication Engineering 4th year
+Electronics and Telecommunication Engineering 4th year student
+Electronics and Instrumentation Engineering 1st year
+Electronics and Instrumentation Engineering 1st year student
+Electronics and Instrumentation Engineering 2nd year
+Electronics and Instrumentation Engineering 2nd year student
+Electronics and Instrumentation Engineering 3rd year
+Electronics and Instrumentation Engineering 3rd year student
+Electronics and Instrumentation Engineering 4th year
+Electronics and Instrumentation Engineering 4th year student
+Instrumentation Engineering 1st year
+Instrumentation Engineering 1st year student
+Instrumentation Engineering 2nd year
+Instrumentation Engineering 2nd year student
+Instrumentation Engineering 3rd year
+Instrumentation Engineering 3rd year student
+Instrumentation Engineering 4th year
+Instrumentation Engineering 4th year student
+Instrumentation and Control Engineering 1st year
+Instrumentation and Control Engineering 1st year student
+Instrumentation and Control Engineering 2nd year
+Instrumentation and Control Engineering 2nd year student
+Instrumentation and Control Engineering 3rd year
+Instrumentation and Control Engineering 3rd year student
+Instrumentation and Control Engineering 4th year
+Instrumentation and Control Engineering 4th year student
+Automobile Engineering 1st year
+Automobile Engineering 1st year student
+Automobile Engineering 2nd year
+Automobile Engineering 2nd year student
+Automobile Engineering 3rd year
+Automobile Engineering 3rd year student
+Automobile Engineering 4th year
+Automobile Engineering 4th year student
+Automotive Engineering 1st year
+Automotive Engineering 1st year student
+Automotive Engineering 2nd year
+Automotive Engineering 2nd year student
+Automotive Engineering 3rd year
+Automotive Engineering 3rd year student
+Automotive Engineering 4th year
+Automotive Engineering 4th year student
+Production Engineering 1st year
+Production Engineering 1st year student
+Production Engineering 2nd year
+Production Engineering 2nd year student
+Production Engineering 3rd year
+Production Engineering 3rd year student
+Production Engineering 4th year
+Production Engineering 4th year student
+Industrial Engineering 1st year
+Industrial Engineering 1st year student
+Industrial Engineering 2nd year
+Industrial Engineering 2nd year student
+Industrial Engineering 3rd year
+Industrial Engineering 3rd year student
+Industrial Engineering 4th year
+Industrial Engineering 4th year student
+Manufacturing Engineering 1st year
+Manufacturing Engineering 1st year student
+Manufacturing Engineering 2nd year
+Manufacturing Engineering 2nd year student
+Manufacturing Engineering 3rd year
+Manufacturing Engineering 3rd year student
+Manufacturing Engineering 4th year
+Manufacturing Engineering 4th year student
+Mechatronics Engineering 1st year
+Mechatronics Engineering 1st year student
+Mechatronics Engineering 2nd year
+Mechatronics Engineering 2nd year student
+Mechatronics Engineering 3rd year
+Mechatronics Engineering 3rd year student
+Mechatronics Engineering 4th year
+Mechatronics Engineering 4th year student
+Chemical Engineering 1st year
+Chemical Engineering 1st year student
+Chemical Engineering 2nd year
+Chemical Engineering 2nd year student
+Chemical Engineering 3rd year
+Chemical Engineering 3rd year student
+Chemical Engineering 4th year
+Chemical Engineering 4th year student
+Petrochemical Engineering 1st year
+Petrochemical Engineering 1st year student
+Petrochemical Engineering 2nd year
+Petrochemical Engineering 2nd year student
+Petrochemical Engineering 3rd year
+Petrochemical Engineering 3rd year student
+Petrochemical Engineering 4th year
+Petrochemical Engineering 4th year student
+Petroleum Engineering 1st year
+Petroleum Engineering 1st year student
+Petroleum Engineering 2nd year
+Petroleum Engineering 2nd year student
+Petroleum Engineering 3rd year
+Petroleum Engineering 3rd year student
+Petroleum Engineering 4th year
+Petroleum Engineering 4th year student
+Aeronautical Engineering 1st year
+Aeronautical Engineering 1st year student
+Aeronautical Engineering 2nd year
+Aeronautical Engineering 2nd year student
+Aeronautical Engineering 3rd year
+Aeronautical Engineering 3rd year student
+Aeronautical Engineering 4th year
+Aeronautical Engineering 4th year student
+Aerospace Engineering 1st year
+Aerospace Engineering 1st year student
+Aerospace Engineering 2nd year
+Aerospace Engineering 2nd year student
+Aerospace Engineering 3rd year
+Aerospace Engineering 3rd year student
+Aerospace Engineering 4th year
+Aerospace Engineering 4th year student
+Marine Engineering 1st year
+Marine Engineering 1st year student
+Marine Engineering 2nd year
+Marine Engineering 2nd year student
+Marine Engineering 3rd year
+Marine Engineering 3rd year student
+Marine Engineering 4th year
+Marine Engineering 4th year student
+Naval Architecture 1st year
+Naval Architecture 1st year student
+Naval Architecture 2nd year
+Naval Architecture 2nd year student
+Naval Architecture 3rd year
+Naval Architecture 3rd year student
+Naval Architecture 4th year
+Naval Architecture 4th year student
+Mining Engineering 1st year
+Mining Engineering 1st year student
+Mining Engineering 2nd year
+Mining Engineering 2nd year student
+Mining Engineering 3rd year
+Mining Engineering 3rd year student
+Mining Engineering 4th year
+Mining Engineering 4th year student
+Metallurgical Engineering 1st year
+Metallurgical Engineering 1st year student
+Metallurgical Engineering 2nd year
+Metallurgical Engineering 2nd year student
+Metallurgical Engineering 3rd year
+Metallurgical Engineering 3rd year student
+Metallurgical Engineering 4th year
+Metallurgical Engineering 4th year student
+Materials Engineering 1st year
+Materials Engineering 1st year student
+Materials Engineering 2nd year
+Materials Engineering 2nd year student
+Materials Engineering 3rd year
+Materials Engineering 3rd year student
+Materials Engineering 4th year
+Materials Engineering 4th year student
+Biomedical Engineering 1st year
+Biomedical Engineering 1st year student
+Biomedical Engineering 2nd year
+Biomedical Engineering 2nd year student
+Biomedical Engineering 3rd year
+Biomedical Engineering 3rd year student
+Biomedical Engineering 4th year
+Biomedical Engineering 4th year student
+Biotechnology Engineering 1st year
+Biotechnology Engineering 1st year student
+Biotechnology Engineering 2nd year
+Biotechnology Engineering 2nd year student
+Biotechnology Engineering 3rd year
+Biotechnology Engineering 3rd year student
+Biotechnology Engineering 4th year
+Biotechnology Engineering 4th year student
+Agricultural Engineering 1st year
+Agricultural Engineering 1st year student
+Agricultural Engineering 2nd year
+Agricultural Engineering 2nd year student
+Agricultural Engineering 3rd year
+Agricultural Engineering 3rd year student
+Agricultural Engineering 4th year
+Agricultural Engineering 4th year student
+Food Technology 1st year
+Food Technology 1st year student
+Food Technology 2nd year
+Food Technology 2nd year student
+Food Technology 3rd year
+Food Technology 3rd year student
+Food Technology 4th year
+Food Technology 4th year student
+Food Engineering 1st year
+Food Engineering 1st year student
+Food Engineering 2nd year
+Food Engineering 2nd year student
+Food Engineering 3rd year
+Food Engineering 3rd year student
+Food Engineering 4th year
+Food Engineering 4th year student
+Environmental Engineering 1st year
+Environmental Engineering 1st year student
+Environmental Engineering 2nd year
+Environmental Engineering 2nd year student
+Environmental Engineering 3rd year
+Environmental Engineering 3rd year student
+Environmental Engineering 4th year
+Environmental Engineering 4th year student
+Energy Engineering 1st year
+Energy Engineering 1st year student
+Energy Engineering 2nd year
+Energy Engineering 2nd year student
+Energy Engineering 3rd year
+Energy Engineering 3rd year student
+Energy Engineering 4th year
+Energy Engineering 4th year student
+Power Engineering 1st year
+Power Engineering 1st year student
+Power Engineering 2nd year
+Power Engineering 2nd year student
+Power Engineering 3rd year
+Power Engineering 3rd year student
+Power Engineering 4th year
+Power Engineering 4th year student
+Textile Engineering 1st year
+Textile Engineering 1st year student
+Textile Engineering 2nd year
+Textile Engineering 2nd year student
+Textile Engineering 3rd year
+Textile Engineering 3rd year student
+Textile Engineering 4th year
+Textile Engineering 4th year student
+Printing Technology 1st year
+Printing Technology 1st year student
+Printing Technology 2nd year
+Printing Technology 2nd year student
+Printing Technology 3rd year
+Printing Technology 3rd year student
+Printing Technology 4th year
+Printing Technology 4th year student
+Robotics Engineering 1st year
+Robotics Engineering 1st year student
+Robotics Engineering 2nd year
+Robotics Engineering 2nd year student
+Robotics Engineering 3rd year
+Robotics Engineering 3rd year student
+Robotics Engineering 4th year
+Robotics Engineering 4th year student
+Automation Engineering 1st year
+Automation Engineering 1st year student
+Automation Engineering 2nd year
+Automation Engineering 2nd year student
+Automation Engineering 3rd year
+Automation Engineering 3rd year student
+Automation Engineering 4th year
+Automation Engineering 4th year student
+Construction Engineering 1st year
+Construction Engineering 1st year student
+Construction Engineering 2nd year
+Construction Engineering 2nd year student
+Construction Engineering 3rd year
+Construction Engineering 3rd year student
+Construction Engineering 4th year
+Construction Engineering 4th year student
+Structural Engineering 1st year
+Structural Engineering 1st year student
+Structural Engineering 2nd year
+Structural Engineering 2nd year student
+Structural Engineering 3rd year
+Structural Engineering 3rd year student
+Structural Engineering 4th year
+Structural Engineering 4th year student
+Ceramic Engineering 1st year
+Ceramic Engineering 1st year student
+Ceramic Engineering 2nd year
+Ceramic Engineering 2nd year student
+Ceramic Engineering 3rd year
+Ceramic Engineering 3rd year student
+Ceramic Engineering 4th year
+Ceramic Engineering 4th year student
+Polymer Engineering 1st year
+Polymer Engineering 1st year student
+Polymer Engineering 2nd year
+Polymer Engineering 2nd year student
+Polymer Engineering 3rd year
+Polymer Engineering 3rd year student
+Polymer Engineering 4th year
+Polymer Engineering 4th year student
+Plastic Engineering 1st year
+Plastic Engineering 1st year student
+Plastic Engineering 2nd year
+Plastic Engineering 2nd year student
+Plastic Engineering 3rd year
+Plastic Engineering 3rd year student
+Plastic Engineering 4th year
+Plastic Engineering 4th year student
+Diploma Mechanical Engineering 1st year
+Diploma Mechanical Engineering 1st year student
+Diploma Mechanical Engineering 2nd year
+Diploma Mechanical Engineering 2nd year student
+Diploma Mechanical Engineering 3rd year
+Diploma Mechanical Engineering 3rd year student
+Diploma Mechanical Engineering 4th year
+Diploma Mechanical Engineering 4th year student
+Diploma Civil Engineering 1st year
+Diploma Civil Engineering 1st year student
+Diploma Civil Engineering 2nd year
+Diploma Civil Engineering 2nd year student
+Diploma Civil Engineering 3rd year
+Diploma Civil Engineering 3rd year student
+Diploma Civil Engineering 4th year
+Diploma Civil Engineering 4th year student
+Diploma Electrical Engineering 1st year
+Diploma Electrical Engineering 1st year student
+Diploma Electrical Engineering 2nd year
+Diploma Electrical Engineering 2nd year student
+Diploma Electrical Engineering 3rd year
+Diploma Electrical Engineering 3rd year student
+Diploma Electrical Engineering 4th year
+Diploma Electrical Engineering 4th year student
+Diploma Electrical and Electronics Engineering 1st year
+Diploma Electrical and Electronics Engineering 1st year student
+Diploma Electrical and Electronics Engineering 2nd year
+Diploma Electrical and Electronics Engineering 2nd year student
+Diploma Electrical and Electronics Engineering 3rd year
+Diploma Electrical and Electronics Engineering 3rd year student
+Diploma Electrical and Electronics Engineering 4th year
+Diploma Electrical and Electronics Engineering 4th year student
+Diploma Electronics Engineering 1st year
+Diploma Electronics Engineering 1st year student
+Diploma Electronics Engineering 2nd year
+Diploma Electronics Engineering 2nd year student
+Diploma Electronics Engineering 3rd year
+Diploma Electronics Engineering 3rd year student
+Diploma Electronics Engineering 4th year
+Diploma Electronics Engineering 4th year student
+Diploma Electronics and Communication Engineering 1st year
+Diploma Electronics and Communication Engineering 1st year student
+Diploma Electronics and Communication Engineering 2nd year
+Diploma Electronics and Communication Engineering 2nd year student
+Diploma Electronics and Communication Engineering 3rd year
+Diploma Electronics and Communication Engineering 3rd year student
+Diploma Electronics and Communication Engineering 4th year
+Diploma Electronics and Communication Engineering 4th year student
+Diploma Electronics and Telecommunication Engineering 1st year
+Diploma Electronics and Telecommunication Engineering 1st year student
+Diploma Electronics and Telecommunication Engineering 2nd year
+Diploma Electronics and Telecommunication Engineering 2nd year student
+Diploma Electronics and Telecommunication Engineering 3rd year
+Diploma Electronics and Telecommunication Engineering 3rd year student
+Diploma Electronics and Telecommunication Engineering 4th year
+Diploma Electronics and Telecommunication Engineering 4th year student
+Diploma Instrumentation Engineering 1st year
+Diploma Instrumentation Engineering 1st year student
+Diploma Instrumentation Engineering 2nd year
+Diploma Instrumentation Engineering 2nd year student
+Diploma Instrumentation Engineering 3rd year
+Diploma Instrumentation Engineering 3rd year student
+Diploma Instrumentation Engineering 4th year
+Diploma Instrumentation Engineering 4th year student
+Diploma Automobile Engineering 1st year
+Diploma Automobile Engineering 1st year student
+Diploma Automobile Engineering 2nd year
+Diploma Automobile Engineering 2nd year student
+Diploma Automobile Engineering 3rd year
+Diploma Automobile Engineering 3rd year student
+Diploma Automobile Engineering 4th year
+Diploma Automobile Engineering 4th year student
+Diploma Production Engineering 1st year
+Diploma Production Engineering 1st year student
+Diploma Production Engineering 2nd year
+Diploma Production Engineering 2nd year student
+Diploma Production Engineering 3rd year
+Diploma Production Engineering 3rd year student
+Diploma Production Engineering 4th year
+Diploma Production Engineering 4th year student
+Diploma Industrial Engineering 1st year
+Diploma Industrial Engineering 1st year student
+Diploma Industrial Engineering 2nd year
+Diploma Industrial Engineering 2nd year student
+Diploma Industrial Engineering 3rd year
+Diploma Industrial Engineering 3rd year student
+Diploma Industrial Engineering 4th year
+Diploma Industrial Engineering 4th year student
+Diploma Manufacturing Engineering 1st year
+Diploma Manufacturing Engineering 1st year student
+Diploma Manufacturing Engineering 2nd year
+Diploma Manufacturing Engineering 2nd year student
+Diploma Manufacturing Engineering 3rd year
+Diploma Manufacturing Engineering 3rd year student
+Diploma Manufacturing Engineering 4th year
+Diploma Manufacturing Engineering 4th year student
+Diploma Mechatronics Engineering 1st year
+Diploma Mechatronics Engineering 1st year student
+Diploma Mechatronics Engineering 2nd year
+Diploma Mechatronics Engineering 2nd year student
+Diploma Mechatronics Engineering 3rd year
+Diploma Mechatronics Engineering 3rd year student
+Diploma Mechatronics Engineering 4th year
+Diploma Mechatronics Engineering 4th year student
+Diploma Chemical Engineering 1st year
+Diploma Chemical Engineering 1st year student
+Diploma Chemical Engineering 2nd year
+Diploma Chemical Engineering 2nd year student
+Diploma Chemical Engineering 3rd year
+Diploma Chemical Engineering 3rd year student
+Diploma Chemical Engineering 4th year
+Diploma Chemical Engineering 4th year student
+Diploma Petrochemical Engineering 1st year
+Diploma Petrochemical Engineering 1st year student
+Diploma Petrochemical Engineering 2nd year
+Diploma Petrochemical Engineering 2nd year student
+Diploma Petrochemical Engineering 3rd year
+Diploma Petrochemical Engineering 3rd year student
+Diploma Petrochemical Engineering 4th year
+Diploma Petrochemical Engineering 4th year student
+Diploma Aeronautical Engineering 1st year
+Diploma Aeronautical Engineering 1st year student
+Diploma Aeronautical Engineering 2nd year
+Diploma Aeronautical Engineering 2nd year student
+Diploma Aeronautical Engineering 3rd year
+Diploma Aeronautical Engineering 3rd year student
+Diploma Aeronautical Engineering 4th year
+Diploma Aeronautical Engineering 4th year student
+Diploma Mining Engineering 1st year
+Diploma Mining Engineering 1st year student
+Diploma Mining Engineering 2nd year
+Diploma Mining Engineering 2nd year student
+Diploma Mining Engineering 3rd year
+Diploma Mining Engineering 3rd year student
+Diploma Mining Engineering 4th year
+Diploma Mining Engineering 4th year student
+Diploma Metallurgical Engineering 1st year
+Diploma Metallurgical Engineering 1st year student
+Diploma Metallurgical Engineering 2nd year
+Diploma Metallurgical Engineering 2nd year student
+Diploma Metallurgical Engineering 3rd year
+Diploma Metallurgical Engineering 3rd year student
+Diploma Metallurgical Engineering 4th year
+Diploma Metallurgical Engineering 4th year student
+Diploma Biomedical Engineering 1st year
+Diploma Biomedical Engineering 1st year student
+Diploma Biomedical Engineering 2nd year
+Diploma Biomedical Engineering 2nd year student
+Diploma Biomedical Engineering 3rd year
+Diploma Biomedical Engineering 3rd year student
+Diploma Biomedical Engineering 4th year
+Diploma Biomedical Engineering 4th year student
+Diploma Agricultural Engineering 1st year
+Diploma Agricultural Engineering 1st year student
+Diploma Agricultural Engineering 2nd year
+Diploma Agricultural Engineering 2nd year student
+Diploma Agricultural Engineering 3rd year
+Diploma Agricultural Engineering 3rd year student
+Diploma Agricultural Engineering 4th year
+Diploma Agricultural Engineering 4th year student
+Diploma Food Technology 1st year
+Diploma Food Technology 1st year student
+Diploma Food Technology 2nd year
+Diploma Food Technology 2nd year student
+Diploma Food Technology 3rd year
+Diploma Food Technology 3rd year student
+Diploma Food Technology 4th year
+Diploma Food Technology 4th year student
+Diploma Environmental Engineering 1st year
+Diploma Environmental Engineering 1st year student
+Diploma Environmental Engineering 2nd year
+Diploma Environmental Engineering 2nd year student
+Diploma Environmental Engineering 3rd year
+Diploma Environmental Engineering 3rd year student
+Diploma Environmental Engineering 4th year
+Diploma Environmental Engineering 4th year student
+Diploma Textile Engineering 1st year
+Diploma Textile Engineering 1st year student
+Diploma Textile Engineering 2nd year
+Diploma Textile Engineering 2nd year student
+Diploma Textile Engineering 3rd year
+Diploma Textile Engineering 3rd year student
+Diploma Textile Engineering 4th year
+Diploma Textile Engineering 4th year student
+Diploma Printing Technology 1st year
+Diploma Printing Technology 1st year student
+Diploma Printing Technology 2nd year
+Diploma Printing Technology 2nd year student
+Diploma Printing Technology 3rd year
+Diploma Printing Technology 3rd year student
+Diploma Printing Technology 4th year
+Diploma Printing Technology 4th year student
+Diploma Robotics 1st year
+Diploma Robotics 1st year student
+Diploma Robotics 2nd year
+Diploma Robotics 2nd year student
+Diploma Robotics 3rd year
+Diploma Robotics 3rd year student
+Diploma Robotics 4th year
+Diploma Robotics 4th year student
+Diploma Automation 1st year
+Diploma Automation 1st year student
+Diploma Automation 2nd year
+Diploma Automation 2nd year student
+Diploma Automation 3rd year
+Diploma Automation 3rd year student
+Diploma Automation 4th year
+Diploma Automation 4th year student
+
+CATEGORY 3 - CAREER CHANGE AUDIENCE
+====================================================================================
+
+------------------------------------------------------------------------------------
+CATEGORY 3
+------------------------------------------------------------------------------------
+
+A. ELIGIBLE NON-IT / OTHER EDUCATION BACKGROUNDS
+
+B.Sc Mathematics
+B.Sc Statistics
+B.Sc Physics
+B.Sc Chemistry
+B.Sc Electronics
+B.Sc Biotechnology
+B.Sc Microbiology
+B.Sc Biology
+B.Sc Life Science
+B.Sc Agriculture
+B.Sc Environmental Science
+B.Sc Geography
+M.Sc Mathematics
+M.Sc Statistics
+M.Sc Physics
+M.Sc Chemistry
+M.Sc Electronics
+M.Sc Biotechnology
+M.Sc Microbiology
+M.Sc Biology
+M.Sc Life Science
+B.Com
+BBA
+BBM
+BMS
+MBA
+PGDM
+M.Com
+BA
+MA
+B.Pharm
+B.Arch
+BHM
+B.Voc
+M.Tech Mechanical Engineering
+M.Tech Civil Engineering
+M.Tech Electrical Engineering
+M.Tech Electronics Engineering
+M.Tech Communication Engineering
+M.Tech Structural Engineering
+M.Tech Embedded Systems
+M.Tech VLSI
+M.Tech Power Systems
+M.Tech Biotechnology
+
+B. NON-IT EDUCATION + ACADEMIC-YEAR VARIANTS
+
+B.Com final year student
+BBA final year student
+BBM final year student
+BMS final year student
+MBA final year student
+M.Com final year student
+BA final year student
+MA final year student
+B.Pharm final year student
+B.Arch final year student
+BHM final year student
+B.Voc final year student
+
+C. CAREER-CHANGE / LEARNING / ASPIRING SIGNALS
+
+Learning Networking
+Learning Linux
+Learning AWS
+Learning Azure
+Learning Cloud Computing
+Career Change to IT
+Career Transition to IT
+Switching to IT
+Transitioning to IT
+Aspiring IT Professional
+Aspiring Network Engineer
+Aspiring System Administrator
+Aspiring Cloud Engineer
+CCNA Student
+CCNA Learner
+CCNP Student
+CCNP Learner
+
+D. IT CERTIFICATIONS / TRAINING / SUPPORTING IT SKILLS
+
+CCNA
+CCNP
+Cisco Certified Network Associate
+Cisco Certified Network Professional
+Computer Networking
+Network Administration
+Network Engineering
+Routing and Switching
+Hardware and Networking
+IT Support
+Desktop Support
+Technical Support
+Computer Hardware
+Help Desk
+Service Desk
+Computer Maintenance
+Google IT Support
+CompTIA A+
+System Administration
+Linux Administration
+Windows Administration
+Windows Server Administration
+Server Administration
+RHCSA
+RHCE
+Red Hat Certified System Administrator
+Red Hat Certified Engineer
+AWS Cloud Practitioner
+AWS Solutions Architect
+Microsoft Azure Fundamentals
+Azure Fundamentals
+AZ-900
+Azure Administrator
+AZ-104
+Cloud Administration
+Cloud Support
+Cloud Infrastructure
+Cyber Security Course
+Cybersecurity Course
+Ethical Hacking
+CEH
+Certified Ethical Hacker
+CompTIA Security+
+CompTIA Network+
+SOC Training
+Security Analyst Training
+Linux
+Ubuntu
+RHEL
+Windows Server
+Active Directory
+AWS
+Amazon Web Services
+Azure
+Microsoft Azure
+Cloud Computing
+Docker
+Kubernetes
+CI/CD
+LAN
+WAN
+TCP/IP
+Routing
+Switching
+Network Security
+NOC
+Infrastructure Engineering
+DevOps
+
+====================================================================================
+
+E. CATEGORY 3 EDUCATION + ORDINAL ACADEMIC-YEAR VARIANTS
+
+B.Sc Mathematics 1st year
+B.Sc Mathematics 1st year student
+B.Sc Mathematics 2nd year
+B.Sc Mathematics 2nd year student
+B.Sc Mathematics 3rd year
+B.Sc Mathematics 3rd year student
+B.Sc Mathematics 4th year
+B.Sc Mathematics 4th year student
+B.Sc Statistics 1st year
+B.Sc Statistics 1st year student
+B.Sc Statistics 2nd year
+B.Sc Statistics 2nd year student
+B.Sc Statistics 3rd year
+B.Sc Statistics 3rd year student
+B.Sc Statistics 4th year
+B.Sc Statistics 4th year student
+B.Sc Physics 1st year
+B.Sc Physics 1st year student
+B.Sc Physics 2nd year
+B.Sc Physics 2nd year student
+B.Sc Physics 3rd year
+B.Sc Physics 3rd year student
+B.Sc Physics 4th year
+B.Sc Physics 4th year student
+B.Sc Chemistry 1st year
+B.Sc Chemistry 1st year student
+B.Sc Chemistry 2nd year
+B.Sc Chemistry 2nd year student
+B.Sc Chemistry 3rd year
+B.Sc Chemistry 3rd year student
+B.Sc Chemistry 4th year
+B.Sc Chemistry 4th year student
+B.Sc Electronics 1st year
+B.Sc Electronics 1st year student
+B.Sc Electronics 2nd year
+B.Sc Electronics 2nd year student
+B.Sc Electronics 3rd year
+B.Sc Electronics 3rd year student
+B.Sc Electronics 4th year
+B.Sc Electronics 4th year student
+B.Sc Biotechnology 1st year
+B.Sc Biotechnology 1st year student
+B.Sc Biotechnology 2nd year
+B.Sc Biotechnology 2nd year student
+B.Sc Biotechnology 3rd year
+B.Sc Biotechnology 3rd year student
+B.Sc Biotechnology 4th year
+B.Sc Biotechnology 4th year student
+B.Sc Microbiology 1st year
+B.Sc Microbiology 1st year student
+B.Sc Microbiology 2nd year
+B.Sc Microbiology 2nd year student
+B.Sc Microbiology 3rd year
+B.Sc Microbiology 3rd year student
+B.Sc Microbiology 4th year
+B.Sc Microbiology 4th year student
+B.Sc Biology 1st year
+B.Sc Biology 1st year student
+B.Sc Biology 2nd year
+B.Sc Biology 2nd year student
+B.Sc Biology 3rd year
+B.Sc Biology 3rd year student
+B.Sc Biology 4th year
+B.Sc Biology 4th year student
+B.Sc Life Science 1st year
+B.Sc Life Science 1st year student
+B.Sc Life Science 2nd year
+B.Sc Life Science 2nd year student
+B.Sc Life Science 3rd year
+B.Sc Life Science 3rd year student
+B.Sc Life Science 4th year
+B.Sc Life Science 4th year student
+B.Sc Agriculture 1st year
+B.Sc Agriculture 1st year student
+B.Sc Agriculture 2nd year
+B.Sc Agriculture 2nd year student
+B.Sc Agriculture 3rd year
+B.Sc Agriculture 3rd year student
+B.Sc Agriculture 4th year
+B.Sc Agriculture 4th year student
+B.Sc Environmental Science 1st year
+B.Sc Environmental Science 1st year student
+B.Sc Environmental Science 2nd year
+B.Sc Environmental Science 2nd year student
+B.Sc Environmental Science 3rd year
+B.Sc Environmental Science 3rd year student
+B.Sc Environmental Science 4th year
+B.Sc Environmental Science 4th year student
+B.Sc Geography 1st year
+B.Sc Geography 1st year student
+B.Sc Geography 2nd year
+B.Sc Geography 2nd year student
+B.Sc Geography 3rd year
+B.Sc Geography 3rd year student
+B.Sc Geography 4th year
+B.Sc Geography 4th year student
+M.Sc Mathematics 1st year
+M.Sc Mathematics 1st year student
+M.Sc Mathematics 2nd year
+M.Sc Mathematics 2nd year student
+M.Sc Mathematics 3rd year
+M.Sc Mathematics 3rd year student
+M.Sc Mathematics 4th year
+M.Sc Mathematics 4th year student
+M.Sc Statistics 1st year
+M.Sc Statistics 1st year student
+M.Sc Statistics 2nd year
+M.Sc Statistics 2nd year student
+M.Sc Statistics 3rd year
+M.Sc Statistics 3rd year student
+M.Sc Statistics 4th year
+M.Sc Statistics 4th year student
+M.Sc Physics 1st year
+M.Sc Physics 1st year student
+M.Sc Physics 2nd year
+M.Sc Physics 2nd year student
+M.Sc Physics 3rd year
+M.Sc Physics 3rd year student
+M.Sc Physics 4th year
+M.Sc Physics 4th year student
+M.Sc Chemistry 1st year
+M.Sc Chemistry 1st year student
+M.Sc Chemistry 2nd year
+M.Sc Chemistry 2nd year student
+M.Sc Chemistry 3rd year
+M.Sc Chemistry 3rd year student
+M.Sc Chemistry 4th year
+M.Sc Chemistry 4th year student
+M.Sc Electronics 1st year
+M.Sc Electronics 1st year student
+M.Sc Electronics 2nd year
+M.Sc Electronics 2nd year student
+M.Sc Electronics 3rd year
+M.Sc Electronics 3rd year student
+M.Sc Electronics 4th year
+M.Sc Electronics 4th year student
+M.Sc Biotechnology 1st year
+M.Sc Biotechnology 1st year student
+M.Sc Biotechnology 2nd year
+M.Sc Biotechnology 2nd year student
+M.Sc Biotechnology 3rd year
+M.Sc Biotechnology 3rd year student
+M.Sc Biotechnology 4th year
+M.Sc Biotechnology 4th year student
+M.Sc Microbiology 1st year
+M.Sc Microbiology 1st year student
+M.Sc Microbiology 2nd year
+M.Sc Microbiology 2nd year student
+M.Sc Microbiology 3rd year
+M.Sc Microbiology 3rd year student
+M.Sc Microbiology 4th year
+M.Sc Microbiology 4th year student
+M.Sc Biology 1st year
+M.Sc Biology 1st year student
+M.Sc Biology 2nd year
+M.Sc Biology 2nd year student
+M.Sc Biology 3rd year
+M.Sc Biology 3rd year student
+M.Sc Biology 4th year
+M.Sc Biology 4th year student
+M.Sc Life Science 1st year
+M.Sc Life Science 1st year student
+M.Sc Life Science 2nd year
+M.Sc Life Science 2nd year student
+M.Sc Life Science 3rd year
+M.Sc Life Science 3rd year student
+M.Sc Life Science 4th year
+M.Sc Life Science 4th year student
+B.Com 1st year
+B.Com 1st year student
+B.Com 2nd year
+B.Com 2nd year student
+B.Com 3rd year
+B.Com 3rd year student
+B.Com 4th year
+B.Com 4th year student
+BBA 1st year
+BBA 1st year student
+BBA 2nd year
+BBA 2nd year student
+BBA 3rd year
+BBA 3rd year student
+BBA 4th year
+BBA 4th year student
+BBM 1st year
+BBM 1st year student
+BBM 2nd year
+BBM 2nd year student
+BBM 3rd year
+BBM 3rd year student
+BBM 4th year
+BBM 4th year student
+BMS 1st year
+BMS 1st year student
+BMS 2nd year
+BMS 2nd year student
+BMS 3rd year
+BMS 3rd year student
+BMS 4th year
+BMS 4th year student
+MBA 1st year
+MBA 1st year student
+MBA 2nd year
+MBA 2nd year student
+MBA 3rd year
+MBA 3rd year student
+MBA 4th year
+MBA 4th year student
+PGDM 1st year
+PGDM 1st year student
+PGDM 2nd year
+PGDM 2nd year student
+PGDM 3rd year
+PGDM 3rd year student
+PGDM 4th year
+PGDM 4th year student
+M.Com 1st year
+M.Com 1st year student
+M.Com 2nd year
+M.Com 2nd year student
+M.Com 3rd year
+M.Com 3rd year student
+M.Com 4th year
+M.Com 4th year student
+BA 1st year
+BA 1st year student
+BA 2nd year
+BA 2nd year student
+BA 3rd year
+BA 3rd year student
+BA 4th year
+BA 4th year student
+MA 1st year
+MA 1st year student
+MA 2nd year
+MA 2nd year student
+MA 3rd year
+MA 3rd year student
+MA 4th year
+MA 4th year student
+B.Pharm 1st year
+B.Pharm 1st year student
+B.Pharm 2nd year
+B.Pharm 2nd year student
+B.Pharm 3rd year
+B.Pharm 3rd year student
+B.Pharm 4th year
+B.Pharm 4th year student
+B.Arch 1st year
+B.Arch 1st year student
+B.Arch 2nd year
+B.Arch 2nd year student
+B.Arch 3rd year
+B.Arch 3rd year student
+B.Arch 4th year
+B.Arch 4th year student
+BHM 1st year
+BHM 1st year student
+BHM 2nd year
+BHM 2nd year student
+BHM 3rd year
+BHM 3rd year student
+BHM 4th year
+BHM 4th year student
+B.Voc 1st year
+B.Voc 1st year student
+B.Voc 2nd year
+B.Voc 2nd year student
+B.Voc 3rd year
+B.Voc 3rd year student
+B.Voc 4th year
+B.Voc 4th year student
+M.Tech Mechanical Engineering 1st year
+M.Tech Mechanical Engineering 1st year student
+M.Tech Mechanical Engineering 2nd year
+M.Tech Mechanical Engineering 2nd year student
+M.Tech Mechanical Engineering 3rd year
+M.Tech Mechanical Engineering 3rd year student
+M.Tech Mechanical Engineering 4th year
+M.Tech Mechanical Engineering 4th year student
+M.Tech Civil Engineering 1st year
+M.Tech Civil Engineering 1st year student
+M.Tech Civil Engineering 2nd year
+M.Tech Civil Engineering 2nd year student
+M.Tech Civil Engineering 3rd year
+M.Tech Civil Engineering 3rd year student
+M.Tech Civil Engineering 4th year
+M.Tech Civil Engineering 4th year student
+M.Tech Electrical Engineering 1st year
+M.Tech Electrical Engineering 1st year student
+M.Tech Electrical Engineering 2nd year
+M.Tech Electrical Engineering 2nd year student
+M.Tech Electrical Engineering 3rd year
+M.Tech Electrical Engineering 3rd year student
+M.Tech Electrical Engineering 4th year
+M.Tech Electrical Engineering 4th year student
+M.Tech Electronics Engineering 1st year
+M.Tech Electronics Engineering 1st year student
+M.Tech Electronics Engineering 2nd year
+M.Tech Electronics Engineering 2nd year student
+M.Tech Electronics Engineering 3rd year
+M.Tech Electronics Engineering 3rd year student
+M.Tech Electronics Engineering 4th year
+M.Tech Electronics Engineering 4th year student
+M.Tech Communication Engineering 1st year
+M.Tech Communication Engineering 1st year student
+M.Tech Communication Engineering 2nd year
+M.Tech Communication Engineering 2nd year student
+M.Tech Communication Engineering 3rd year
+M.Tech Communication Engineering 3rd year student
+M.Tech Communication Engineering 4th year
+M.Tech Communication Engineering 4th year student
+M.Tech Structural Engineering 1st year
+M.Tech Structural Engineering 1st year student
+M.Tech Structural Engineering 2nd year
+M.Tech Structural Engineering 2nd year student
+M.Tech Structural Engineering 3rd year
+M.Tech Structural Engineering 3rd year student
+M.Tech Structural Engineering 4th year
+M.Tech Structural Engineering 4th year student
+M.Tech Embedded Systems 1st year
+M.Tech Embedded Systems 1st year student
+M.Tech Embedded Systems 2nd year
+M.Tech Embedded Systems 2nd year student
+M.Tech Embedded Systems 3rd year
+M.Tech Embedded Systems 3rd year student
+M.Tech Embedded Systems 4th year
+M.Tech Embedded Systems 4th year student
+M.Tech VLSI 1st year
+M.Tech VLSI 1st year student
+M.Tech VLSI 2nd year
+M.Tech VLSI 2nd year student
+M.Tech VLSI 3rd year
+M.Tech VLSI 3rd year student
+M.Tech VLSI 4th year
+M.Tech VLSI 4th year student
+M.Tech Power Systems 1st year
+M.Tech Power Systems 1st year student
+M.Tech Power Systems 2nd year
+M.Tech Power Systems 2nd year student
+M.Tech Power Systems 3rd year
+M.Tech Power Systems 3rd year student
+M.Tech Power Systems 4th year
+M.Tech Power Systems 4th year student
+M.Tech Biotechnology 1st year
+M.Tech Biotechnology 1st year student
+M.Tech Biotechnology 2nd year
+M.Tech Biotechnology 2nd year student
+M.Tech Biotechnology 3rd year
+M.Tech Biotechnology 3rd year student
+M.Tech Biotechnology 4th year
+M.Tech Biotechnology 4th year student
+
+SHARED FRESHER / EXPERIENCE / ACADEMIC-STAGE SIGNALS
+====================================================================================
+
+------------------------------------------------------------------------------------
+SHARED
+------------------------------------------------------------------------------------
+
+A. FRESHER / ACADEMIC-STAGE SIGNALS
+
+fresher
+fresh graduate
+recent graduate
+graduate engineer trainee
+trainee engineer
+entry level engineer
+junior engineer
+associate engineer
+trainee
+final semester student
+graduating student
+graduating engineering student
+
+
+1st year
+1st year student
+2nd year
+2nd year student
+3rd year
+3rd year student
+4th year
+4th year student
+first year
+first year student
+second year
+second year student
+third year
+third year student
+fourth year
+fourth year student
+pre-final year
+pre-final year student
+pre final year
+pre final year student
+prefinal year
+prefinal year student
+penultimate year
+penultimate year student
+final year
+final year student
+final-year
+final-year student
+last year
+last year student
+final semester
+last semester
+last semester student
+
+B. 1-3 YEAR EXPERIENCE SIGNALS - COMPREHENSIVE
+
+1 year experience
+1 year of experience
+1 year work experience
+1 year professional experience
+1 yr experience
+1 yr exp
+1 year exp
+one year experience
+one year of experience
+experience 1 year
+experience: 1 year
+1 YOE
+1 year YOE
+2 years experience
+2 years of experience
+2 years work experience
+2 years professional experience
+2 yr experience
+2 yrs experience
+2 yr exp
+2 yrs exp
+2 years exp
+two years experience
+two years of experience
+experience 2 years
+experience: 2 years
+2 YOE
+2 years YOE
+3 years experience
+3 years of experience
+3 years work experience
+3 years professional experience
+3 yr experience
+3 yrs experience
+3 yr exp
+3 yrs exp
+3 years exp
+three years experience
+three years of experience
+experience 3 years
+experience: 3 years
+3 YOE
+3 years YOE
+1+ year experience
+1+ years experience
+1+ year of experience
+1+ years of experience
+1+ yr experience
+1+ yrs experience
+1+ yr exp
+1+ yrs exp
+1+ YOE
+over 1 year experience
+more than 1 year experience
+at least 1 year experience
+2+ year experience
+2+ years experience
+2+ year of experience
+2+ years of experience
+2+ yr experience
+2+ yrs experience
+2+ yr exp
+2+ yrs exp
+2+ YOE
+over 2 years experience
+more than 2 years experience
+at least 2 years experience
+3+ year experience
+3+ years experience
+3+ year of experience
+3+ years of experience
+3+ yr experience
+3+ yrs experience
+3+ yr exp
+3+ yrs exp
+3+ YOE
+at least 3 years experience
+1-2 years experience
+1 - 2 years experience
+1 to 2 years experience
+1–2 years experience
+1-2 yrs experience
+1-2 yrs exp
+1 to 2 yrs experience
+1 to 2 yrs exp
+1-2 YOE
+2-3 years experience
+2 - 3 years experience
+2 to 3 years experience
+2–3 years experience
+2-3 yrs experience
+2-3 yrs exp
+2 to 3 yrs experience
+2 to 3 yrs exp
+2-3 YOE
+1-3 years experience
+1 - 3 years experience
+1 to 3 years experience
+1–3 years experience
+1-3 yrs experience
+1-3 yrs exp
+1 to 3 yrs experience
+1 to 3 yrs exp
+1-3 YOE
+early career professional
+early career engineer
+early career developer
+early career IT professional
+early career technology professional
+junior professional
+junior IT professional
+1-3 years professional experience
+1 to 3 years professional experience
+
+
+END OF ARRANGED KEYWORD FILE

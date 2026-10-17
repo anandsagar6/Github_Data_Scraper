@@ -1,0 +1,206 @@
+# ==========================================================================
+# WHAT THIS FILE IS FOR
+# ==========================================================================
+# This project is deployed by CLONING it onto each laptop.  A clone must be
+# runnable immediately -- no file to copy by hand, no interactive login, no
+# "it works on my machine".  So the rule here is deliberately narrow:
+#
+#     IGNORE only what a run CREATES and can create again by itself,
+#     plus the collected data, which belongs to one laptop and not to git.
+#
+#     TRACK everything else -- code, configuration, documentation, the test
+#     fixtures, and the GitHub login.
+#
+# If you are about to add a line to this file, ask: "would a fresh clone
+# still start without it?"  If the answer is no, do not add the line.
+#
+# VERIFY IT after any change.  Simulate a clone and run the three read-only
+# modes; none of them writes anything:
+#
+#     git ls-files -z | xargs -0 tar c | (mkdir -p /tmp/t && tar x -C /tmp/t)
+#     cd /tmp/t
+#     python3 student_scraper.py --validate-keywords     # expect RESULT: PASS
+#     python3 student_scraper.py --dry-run               # expect search 1 of N
+#     ./reset.sh -n                                      # expect no errors
+
+
+# ==========================================================================
+# 1. TRACKED ON PURPOSE -- do not add ignore rules for these
+# ==========================================================================
+# Listed here as documentation.  Nothing below should ever match them.
+#
+#   student_scraper.py      the scraper
+#   config.py               every path and tuning constant
+#   new_mylib.py            the cities and the keywords.  Configuration, not
+#                           output: its history is what explains why a run
+#                           searched what it did.
+#   requirements.txt        the dependency list
+#   reset.sh                returns a clone to its freshly-cloned state
+#   README.md, Documentation/
+#   tests/                  including tests/fixtures/*.xlsx -- real Instant
+#                           Data Scraper exports the suite depends on.
+#                           Without them the suite silently loses coverage.
+#   github_profile.txt      one real captured profile, read by
+#                           tests/test_merge.py
+#
+#   github_auth.json        THE GITHUB LOGIN.  Tracked DELIBERATELY.
+#
+#       This file used to be ignored, and that was the one thing stopping a
+#       clone from working out of the box: without it the crawl starts,
+#       fails to detect a login and stops with "Run: python3
+#       student_scraper.py --login" -- which opens a browser window and
+#       therefore needs a machine with a display.  On a headless box, or on
+#       eight laptops at once, that is not workable.
+#
+#       UNDERSTAND WHAT IS NOW IN GIT.  This file IS the session: roughly
+#       12 github.com cookies including user_session.  Anyone who can read
+#       this repository is signed in as that account, with no password and
+#       no 2FA prompt.  The repository is private, which is what makes this
+#       acceptable; it is not a secret that can be shared further.
+#
+#       Two practical consequences, neither of them optional:
+#         - Git history is permanent.  Deleting the file in a later commit
+#           does NOT remove it from history.  Rotating the account's session
+#           (sign out everywhere on GitHub) is what actually invalidates it.
+#         - GitHub rotates user_session periodically, so a committed copy
+#           goes stale.  When a clone reports "GitHub login not detected",
+#           run --login once on a machine with a display and commit the
+#           refreshed file.
+#
+#       If this repository is ever made public, remove this file from
+#       tracking and rotate the session the same day.
+
+
+# ==========================================================================
+# 2. PER-MACHINE CRAWL STATE -- ignored, and it MUST stay that way
+# ==========================================================================
+# These are not ignored for secrecy.  They are ignored because tracking them
+# would BREAK the thing this file is trying to achieve.
+#
+# One folder is one rank.  Each laptop has its own position in its own
+# campaign, and every one of these files is recreated automatically when it
+# is absent -- read_current_row() writes current_row.json at START,
+# StateManager treats a missing file as a fresh run, load_cycle_num()
+# returns 0, and the store is created with its schema on first open.
+#
+# So a clone with none of them present is EXACTLY what "start fresh" means.
+# Commit one and every laptop that pulls inherits another laptop's crawl
+# position, duplicate index and cooldown -- they would all resume at the
+# same search and collect the same people.
+scraper_state.json
+current_row.json
+cycle_state.json
+keyword_cycle.json
+deferred_profiles.json
+transient_failures.json
+throttle_state.json
+rate_limit_state.json
+temporary.txt
+temporary.json
+skipped_accounts.txt
+failed_profiles.txt
+
+# The result store: what makes a duplicate a duplicate.  WAL mode, so the
+# two side files travel with it.
+students.db
+students.db-wal
+students.db-shm
+students.db-journal
+
+# THIS LAPTOP'S RANK.  {"rank": 2, "num_sys": 3}
+#
+# Ignored for a specific reason, and it is the one that makes `git pull`
+# usable here.  `rank` differs per laptop.  While it was edited directly in
+# student_scraper.py, every laptop with rank != 1 had a locally modified
+# TRACKED file, so the moment anything else in that file changed upstream
+# the pull refused outright:
+#
+#     error: Your local changes to the following files would be
+#     overwritten by merge:  student_scraper.py
+#     Aborting
+#
+# Keeping the per-machine number in an ignored file removes the collision
+# entirely: pull only ever touches tracked files, and this is not one.
+# rank.example.json IS tracked, so a new laptop can see the format.
+rank.json
+
+
+# ==========================================================================
+# 3. COLLECTED PERSONAL DATA -- ignored
+# ==========================================================================
+# Real people's names, emails, phone numbers and WhatsApp numbers.  This is
+# the output of a run, it is specific to one laptop, and committing it would
+# push one machine's collected people onto every other machine.
+#
+# The directory itself is recreated by ensure_dirs() on every startup, so a
+# clone without it still runs.
+Student Data original/
+backup_final_output_*/
+backup_legacy_migration_*/
+*.xlsx.legacy
+
+# Loose workbooks dropped at the top level by hand or by Instant Data
+# Scraper.  Root-anchored (leading /) so tests/fixtures/*.xlsx is untouched.
+/student_data.xlsx
+/student_data_*.xlsx
+/github*.xlsx
+
+
+# ==========================================================================
+# 4. WORKING DIRECTORIES -- ignored, all recreated on demand
+# ==========================================================================
+# ensure_runtime_dirs() creates the first three on every startup;
+# staging_for() creates crawl_staging/<slug>/ when a search needs staging;
+# --retry-current-search creates retry_backup/; --migrate-output creates
+# imported/; _connect() creates history/ when something first writes to it.
+temp_downloads/
+keyword_downloads/
+crawl_staging/
+retry_backup/
+logs/
+history/
+imported/
+
+# The persistent Chromium profile.  Holds login cookies and ~1 GB of cache,
+# and the current design keeps it OUTSIDE the project anyway (config.py
+# builds it under /var/tmp).  This rule covers the legacy in-project path.
+.pw_profile/
+
+
+# ==========================================================================
+# 5. JUNK -- ignored
+# ==========================================================================
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Atomic writes land on "<path>.tmp" and on the hidden "<dir>/.<name>.tmp"
+# sibling before being renamed over the target.  An interrupted write leaves
+# one behind; neither spelling belongs in git.
+*.tmp
+.*.tmp
+
+# LibreOffice lock files, created while a .docx or .xlsx is open.  This
+# project never deletes them and never commits them.
+.~lock.*#
+
+# Editor and OS clutter.
+*.swp
+*~
+.DS_Store
+.idea/
+.vscode/
+
+
+# ==========================================================================
+# 6. EXPLICIT RESCUES
+# ==========================================================================
+# Belt and braces: these are needed to run or to test, and a future rule
+# above must not be able to swallow them by accident.
+!tests/fixtures/*.xlsx
+!tests/fixtures/*.json
+!github_auth.json
+!requirements.txt
+!rank.example.json
