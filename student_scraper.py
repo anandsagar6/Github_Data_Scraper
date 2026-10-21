@@ -105,10 +105,10 @@ log = logging.getLogger("student_scraper")
 # These are the DEFAULTS, and they are what a fresh clone runs with.  Set
 # them per laptop in rank.json (below) rather than by editing this file.
 rank = 1
-num_sys = 15
+num_sys = 25
 
 # -- night stop: no collecting between these hours (local, 24-hour clock) --
-NIGHT_PAUSE_ENABLED = False     # True = ON, False = OFF
+NIGHT_PAUSE_ENABLED = True     # True = ON, False = OFF
 NIGHT_START_HOUR = 23           # collecting stops at this hour
 NIGHT_END_HOUR = 5              # collecting resumes at this hour
 
@@ -116,16 +116,18 @@ NIGHT_END_HOUR = 5              # collecting resumes at this hour
 KEYWORD_SHUFFLE_ENABLED = True  # False = new_mylib.py's file order
 
 # -- request pacing: every wait is a fresh random draw MIN..MAX, in seconds
-SEARCH_DELAY_MIN = 15           # between two completed searches
+SEARCH_DELAY_MIN = 5           # between two completed searches
 SEARCH_DELAY_MAX = 20
 ZERO_RESULT_DELAY_MIN = 5       # after a search that matched nobody
-ZERO_RESULT_DELAY_MAX = 7
-PAGE_DELAY_MIN = 60             # between two results pages of one search
+ZERO_RESULT_DELAY_MAX = 10
+PAGE_DELAY_MIN = 20             # between two results pages of one search
 PAGE_DELAY_MAX = 180
 PROFILE_DELAY_MIN = 5           # between two people
 PROFILE_DELAY_MAX = 25
 JITTER_FRACTION = 0.35          # retry backoffs are spread up by 0-35%
-LAP_COOLDOWN_MINUTES = 45       # cooldown when the whole list has been walked
+LAP_COOLDOWN_MIN = 10  
+LAP_COOLDOWN_MAX = 60           
+LAP_COOLDOWN_MINUTES = random.randrange(LAP_COOLDOWN_MIN, LAP_COOLDOWN_MAX + 1)      # cooldown when the whole list has been walked
 
 # -- work / break: both drawn fresh every time, counting WORKING time only -
 WORK_PERIOD_MIN_HOURS = 2       # work this long...
