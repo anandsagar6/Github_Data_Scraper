@@ -452,7 +452,9 @@ nothing else opens it.
 the imports in `student_scraper.py`** — 22 lines, one comment each, in the
 order `find_naukri_job.py` has them, and above the first line of machinery.
 Nothing about waiting is in `config.py` any more; it keeps paths, the output
-schema, the rate-limit cooldown ladder and crawl tuning.
+schema and crawl tuning.  The rate-limit cooldown moved up here too: it is a
+fresh random `RATE_LIMIT_COOLDOWN_MIN..MAX` draw on every hit, and it never
+ends the run.
 
 ```python
 rank = 1
@@ -477,6 +479,8 @@ PROFILE_DELAY_MIN = 5           # between two people
 PROFILE_DELAY_MAX = 25
 JITTER_FRACTION = 0.35          # retry backoffs are spread up by 0-35%
 LAP_COOLDOWN_MINUTES = 45       # cooldown when the whole list has been walked
+RATE_LIMIT_COOLDOWN_MIN = 5     # a GitHub rate limit waits a fresh random
+RATE_LIMIT_COOLDOWN_MAX = 30    # MIN..MAX minutes, then retries -- never stops
 
 # -- work / break: both drawn fresh every time, counting WORKING time only -
 WORK_PERIOD_MIN_HOURS = 2       # work this long...

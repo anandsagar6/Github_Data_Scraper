@@ -511,7 +511,8 @@ HEALTH_MAX_WAIT_MINUTES = None
 # 0 disables periodic refresh (completion-only, the old behaviour).
 # A GITHUB RATE LIMIT ON A PROFILE: COOL DOWN RATHER THAN STOP.
 # A rate limit on the SEARCH page or during pagination already escalates the
-# persisted cooldown (see COOLDOWN_MINUTES) and retries the same search.  A rate
+# persisted cooldown (see RATE_LIMIT_COOLDOWN_MIN/MAX) and retries the same
+# search.  A rate
 # limit on a PROFILE used to behave differently: the profile stayed
 # retryable, the search could not complete, and the whole rank stopped
 # waiting for a human to rerun it -- which for a multi-day unattended run
@@ -551,25 +552,34 @@ PACING_PROFILE = (1.0, 2.5)
 KEYWORD_CYCLE_FILE = os.path.join(PROJECT_ROOT, "keyword_cycle.json")
 
 # ------------------------------------------------- rate-limit cooldown -------
-# When GitHub actually returns a rate-limit/challenge, normal pacing is not
-# enough.  These are OUR cooldown minutes per escalation level (1..4).
+# THE WAIT ITSELF IS NO LONGER HERE.  When GitHub returns a rate-limit or a
+# challenge, the run waits a FRESH RANDOM draw of
 #
-# They were 15/30/60/120.  Measured against this workload that was far too
-# long: a rank runs at about FOUR requests per minute -- roughly 300x under
-# GitHub's documented 30-searches-per-minute allowance -- and the search
-# limit resets in about 60 seconds, so a 15-minute first wait cost ~15x more
-# than the limit it was waiting out.  The ladder still escalates steeply, so
-# a device that is genuinely blocked backs off hard; it just no longer treats
-# a one-minute limit as a quarter-hour outage.
-COOLDOWN_MINUTES = [1, 5, 15, 30]
-MAX_COOLDOWN_LEVEL = 4         # the last defined rung of the ladder
+#     RATE_LIMIT_COOLDOWN_MIN .. RATE_LIMIT_COOLDOWN_MAX   minutes
+#
+# and those two live at the TOP of student_scraper.py beside the other
+# MIN/MAX pacing knobs (SEARCH_DELAY_*, PAGE_DELAY_*, PROFILE_DELAY_*,
+# LAP_COOLDOWN_*), because that is the one place an operator looks to change
+# how hard this run paces itself.  Change them there, not here.
+#
+# WHAT USED TO BE HERE, and why it went: a fixed ladder of minutes indexed by
+# escalation level -- 1, 5, 15, 30 -- which ran out at level 4.  One random
+# band replaces it, so the first rate limit and the twentieth get the same
+# treatment (draw a wait, sleep it, retry the same search) and there is no
+# last rung to fall off.
+#
+# MAX_COOLDOWN_LEVEL is kept only because RateLimitCooldown.exhausted() still
+# reads it, and that only matters when STOP_WHEN_COOLDOWN_EXHAUSTED is True.
+# It is False, so nothing below stops the run.
+MAX_COOLDOWN_LEVEL = 4         # consulted ONLY if STOP_WHEN_... is True
 
 # WHAT HAPPENS WHEN THE LADDER RUNS OUT.
 #
 # True  -- stop the device safely after MAX_COOLDOWN_LEVEL.  State is
 #          preserved and a human reruns it.
 # False -- never stop.  The wait stays at the top of the ladder
-#          (COOLDOWN_MINUTES[-1]) and the SAME search is retried for as long
+#          (a fresh RATE_LIMIT_COOLDOWN_MIN..MAX draw each time) and the
+#          SAME search is retried for as long
 #          as it takes.  This is exactly how a GitHub 5xx outage is already
 #          handled -- see RateLimitCooldown.exhausted() -- so nothing new is
 #          invented, the same path is simply opened to rate limits too.
@@ -579,8 +589,8 @@ MAX_COOLDOWN_LEVEL = 4         # the last defined rung of the ladder
 # somebody notices in the morning.
 #
 # THE COST, stated plainly: a genuinely blocked or suspended account is now
-# retried forever instead of stopping.  At COOLDOWN_MINUTES[-1] that is one
-# attempt every 30 minutes -- 48 a day, which is a trickle, not a hammering
+# retried forever instead of stopping.  At a 5-30 minute draw that is a few
+# attempts an hour -- a trickle, not a hammering
 # -- but nothing will tell you the account is dead except the log.  Watch
 # logs/student_scraper.log for a cooldown that never clears.
 STOP_WHEN_COOLDOWN_EXHAUSTED = False

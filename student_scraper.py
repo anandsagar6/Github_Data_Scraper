@@ -128,6 +128,8 @@ JITTER_FRACTION = 0.35          # retry backoffs are spread up by 0-35%
 LAP_COOLDOWN_MIN = 10  
 LAP_COOLDOWN_MAX = 60           
 LAP_COOLDOWN_MINUTES = random.randrange(LAP_COOLDOWN_MIN, LAP_COOLDOWN_MAX + 1)      # cooldown when the whole list has been walked
+RATE_LIMIT_COOLDOWN_MIN = 5     # a GitHub rate limit waits a fresh random
+RATE_LIMIT_COOLDOWN_MAX = 30    # MIN..MAX minutes, then retries -- never stops
 
 # -- work / break: both drawn fresh every time, counting WORKING time only -
 WORK_PERIOD_MIN_HOURS = 2       # work this long...
@@ -7857,27 +7859,46 @@ def device_card(owned, completed, current_rank, total_ranks,
 # pages) is not enough once GitHub actually returns a rate-limit/challenge.  Then
 # this escalating, PERSISTED cooldown takes over:
 #
-#     level 1 ->  1 min    level 3 -> 15 min
-#     level 2 ->  5 min    level 4 -> 30 min
-#     still limited after level 4 -> stop the rank/device, resume later.
+# every hit waits a FRESH RANDOM draw of RATE_LIMIT_COOLDOWN_MIN..MAX minutes
+# (top of this file), then retries the SAME search from its saved resume
+# point.  Hit 1 and hit 20 are treated alike -- there is no ladder that runs
+# out and no level that stops the device, so an unattended multi-day run
+# survives any number of rate limits:
+#
+#     rate limit -> wait MIN..MAX min -> retry -> rate limit -> wait again...
+#
+# The escalation LEVEL is still counted and shown, because a level climbing
+# into the dozens is how the log tells you a limit is not clearing; it just
+# no longer selects the wait or ends the run.
 #
 # The cooldown is rank-local (runtime/rank_NNN/rate_limit_state.json) and
 # persisted, so restarting the command cannot bypass it.  A server-provided
 # Retry-After is taken AS GIVEN (config.TRUST_RETRY_AFTER) -- GitHub stating
-# its own reset time is better information than our ladder, in either
+# its own reset time is better information than our own draw, in either
 # direction.  A successful retry of the blocked operation resets the
 # escalation to 0.
 #
 # This module NEVER circumvents a restriction: it only decides to wait or stop.
 # --------------------------------------------------------------------------
 def cooldown_seconds(level):
-    """Our conservative cooldown for an escalation level (1-based)."""
-    minutes = C.COOLDOWN_MINUTES
+    """A fresh random cooldown in SECONDS, drawn MIN..MAX minutes.
+
+    Read RATE_LIMIT_COOLDOWN_MIN / RATE_LIMIT_COOLDOWN_MAX from the top of
+    this file, exactly like the pacing delays and LAP_COOLDOWN_MINUTES, and
+    draw a new wait on every call -- so two rate limits in a row do not wait
+    the same number of minutes, and the 20th waits no longer than the 1st.
+
+    `level` is still accepted and still decides NOTHING but "is there a
+    cooldown at all": level < 1 means none and returns 0.  The level is kept
+    for the log and the on-screen display.
+    """
     if level < 1:
         return 0
-    if level <= len(minutes):
-        return int(minutes[level - 1]) * 60
-    return int(minutes[-1]) * 60
+    low = int(RATE_LIMIT_COOLDOWN_MIN)
+    high = int(RATE_LIMIT_COOLDOWN_MAX)
+    if high < low:                     # a swapped pair is an operator typo,
+        low, high = high, low          # not a reason to crash a 3-day run
+    return random.randrange(low, high + 1) * 60
 
 
 def _parse(text):

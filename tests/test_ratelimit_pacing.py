@@ -1,14 +1,17 @@
 """Conservative pacing + escalating rate-limit cooldown (all time mocked).
 
 Normal pacing puts a random delay between different completed searches and
-between result pages.  A genuine GitHub rate-limit/challenge escalates a
-persisted cooldown (1/5/15/30 min, then stop) that a restart cannot bypass
-and that resets when the blocked operation finally works.  No test waits for
-real time -- sleeps and 'now' are injected.
+between result pages.  A genuine GitHub rate-limit/challenge starts a persisted cooldown of a
+FRESH RANDOM RATE_LIMIT_COOLDOWN_MIN..MAX minutes that a restart cannot
+bypass and that resets when the blocked operation finally works.  There is
+no ladder and no level that stops the run: every hit draws its own wait and
+the same search is retried afterwards, for as many hits as it takes.  No
+test waits for real time -- sleeps and 'now' are injected, and the tests
+that need an exact duration pin the draw with fixed_cooldown().
 
 A GitHub 5xx is NOT that.  It means GitHub is broken, not that GitHub is
-restricting us, so it waits at the top of the ladder and retries for as long
-as the outage lasts -- it never stops the job.  OutageCase covers that.
+restricting us, so it too waits and retries for as long as the outage lasts
+-- it never stops the job.  OutageCase covers that.
 """
 
 import asyncio
@@ -30,6 +33,27 @@ import sandbox                                         # noqa: E402
 
 def at(minute):
     return datetime.datetime(2026, 9, 28, 12, minute, 0)
+
+
+def fixed_cooldown(case, minutes):
+    """Pin the random cooldown draw to exactly `minutes` for one test.
+
+    cooldown_seconds() reads these two module globals on every call, so a
+    test that needs an exact duration squeezes MIN and MAX onto the same
+    value instead of reaching into `random`.
+    """
+    low = student_scraper.RATE_LIMIT_COOLDOWN_MIN
+    high = student_scraper.RATE_LIMIT_COOLDOWN_MAX
+    student_scraper.RATE_LIMIT_COOLDOWN_MIN = minutes
+    student_scraper.RATE_LIMIT_COOLDOWN_MAX = minutes
+    case.addCleanup(setattr, student_scraper, "RATE_LIMIT_COOLDOWN_MAX", high)
+    case.addCleanup(setattr, student_scraper, "RATE_LIMIT_COOLDOWN_MIN", low)
+
+
+def band():
+    """The production cooldown band in SECONDS, as (low, high)."""
+    return (student_scraper.RATE_LIMIT_COOLDOWN_MIN * 60,
+            student_scraper.RATE_LIMIT_COOLDOWN_MAX * 60)
 
 
 def stop_at_the_end_of_the_ladder(case):
@@ -57,25 +81,40 @@ class CooldownEscalationCase(unittest.TestCase):
     def cd(self):
         return RateLimitCooldown(path=self.path)
 
-    # 3-6. escalation ladder 1 / 5 / 15 / 30 minutes.
-    # It was 15/30/60/120, which was ~15x longer than the limit it waited
-    # out: this workload runs at about four requests per minute and GitHub's
-    # search allowance resets in roughly sixty seconds.  The ladder still
-    # escalates steeply so a genuinely blocked device backs off hard.
-    def test_escalation_ladder(self):
+    # 3-6.  Every hit waits a fresh random draw inside the band, the level
+    # keeps climbing so the log can show a limit that is not clearing, and
+    # nothing ever exhausts.  Twenty hits is the point: an unattended run
+    # must survive the twentieth rate limit exactly like the first.
+    def test_every_hit_draws_a_fresh_wait_inside_the_band(self):
+        low, high = band()
         c = self.cd()
-        self.assertEqual(c.escalate("search", "rate limit", now=at(0)), 1)
-        self.assertEqual(c.remaining(now=at(0)), 1 * 60)
-        self.assertEqual(c.escalate("search", "rate limit", now=at(0)), 2)
-        self.assertEqual(c.remaining(now=at(0)), 5 * 60)
-        self.assertEqual(c.escalate("search", "rate limit", now=at(0)), 3)
-        self.assertEqual(c.remaining(now=at(0)), 15 * 60)
-        self.assertEqual(c.escalate("search", "rate limit", now=at(0)), 4)
-        self.assertEqual(c.remaining(now=at(0)), 30 * 60)
-        self.assertFalse(c.exhausted())
-        # each level must be longer than the one before it
-        self.assertEqual(C.COOLDOWN_MINUTES,
-                         sorted(C.COOLDOWN_MINUTES))
+        for expected_level in range(1, 21):
+            self.assertEqual(c.escalate("search", "rate limit", now=at(0)),
+                             expected_level)
+            wait = c.remaining(now=at(0))
+            self.assertTrue(low <= wait <= high,
+                            "hit %d waited %ds, outside the %d..%ds band"
+                            % (expected_level, wait, low, high))
+            self.assertFalse(c.exhausted(),
+                             "hit %d must not stop an unattended run"
+                             % expected_level)
+
+    # ...and the draw really is a draw, not a constant dressed up as one.
+    def test_the_wait_actually_varies(self):
+        c = self.cd()
+        seen = set()
+        for _ in range(60):
+            c.escalate("search", "rate limit", now=at(0))
+            seen.add(c.remaining(now=at(0)))
+        self.assertGreater(len(seen), 1,
+                           "60 hits all waited %r -- the cooldown is not "
+                           "random" % seen)
+
+    # a one-line pin so the band cannot be widened by accident
+    def test_the_band_is_sane(self):
+        low, high = band()
+        self.assertGreater(low, 0, "a zero-minute cooldown is a busy loop")
+        self.assertLessEqual(low, high, "MIN must not exceed MAX")
 
     # 7. a further failure after level 4 -> exhausted (caller stops the device)
     def test_fifth_failure_exhausts(self):
@@ -99,8 +138,10 @@ class CooldownEscalationCase(unittest.TestCase):
 
     # 9/10. the cooldown persists across a restart and cannot be bypassed
     def test_persists_and_blocks_restart(self):
+        # pinned to 15 minutes so the window is observable across a restart;
+        # the duration is a random draw in production, which is tested above
+        fixed_cooldown(self, 15)
         c = self.cd()
-        # level 3 lasts 15 minutes, long enough to observe across a restart
         for _ in range(3):
             c.escalate("search", "rate limit", now=at(0))
         fresh = self.cd()                                   # simulate restart
@@ -130,13 +171,14 @@ class CooldownEscalationCase(unittest.TestCase):
 
     def test_never_shortening_can_be_restored(self):
         """TRUST_RETRY_AFTER=False keeps the old max(policy, header)."""
+        fixed_cooldown(self, 7)
         original = C.TRUST_RETRY_AFTER
         C.TRUST_RETRY_AFTER = False
         try:
             c = RateLimitCooldown(path=os.path.join(self.dir, "c.json"))
             c.escalate("search", "rate limit", retry_after=1, now=at(0))
-            self.assertEqual(c.remaining(now=at(0)),
-                             C.COOLDOWN_MINUTES[0] * 60)
+            # our 7-minute draw wins over GitHub's 1 second, as before
+            self.assertEqual(c.remaining(now=at(0)), 7 * 60)
         finally:
             C.TRUST_RETRY_AFTER = original
 
@@ -147,9 +189,11 @@ class CooldownEscalationCase(unittest.TestCase):
         self.assertGreaterEqual(c.remaining(now=at(0)), 1)
 
     def test_cooldown_seconds_and_retry_after_parse(self):
-        self.assertEqual(cooldown_seconds(1), 60)
-        self.assertEqual(cooldown_seconds(4), 1800)
-        self.assertEqual(cooldown_seconds(9), 1800)     # clamps to last level
+        low, high = band()
+        self.assertEqual(cooldown_seconds(0), 0)        # no cooldown at all
+        self.assertEqual(cooldown_seconds(-3), 0)
+        for level in (1, 4, 9, 99):                     # level selects nothing
+            self.assertTrue(low <= cooldown_seconds(level) <= high)
         self.assertEqual(parse_retry_after("120"), 120)
         self.assertIsNone(parse_retry_after(""))
         self.assertIsNone(parse_retry_after(None))
@@ -168,9 +212,79 @@ class NeverStopOnRateLimitCase(unittest.TestCase):
         C.STOP_WHEN_COOLDOWN_EXHAUSTED = False
         self.addCleanup(setattr, C, "STOP_WHEN_COOLDOWN_EXHAUSTED",
                         self.saved)
+        # a sandbox + a fake sleep, so the loop below can be driven for real
+        self.dir = tempfile.mkdtemp(prefix="neverstop_")
+        self.addCleanup(shutil.rmtree, self.dir, True)
+        self.ctx = sandbox.enter(os.path.join(self.dir, "runtime"))
+        self.addCleanup(sandbox.restore)
+        self.said = []
+        self.slept = []
+        orig_say = student_scraper.say
+        orig_sleep = student_scraper.sleep_interruptible
+        self.addCleanup(setattr, student_scraper, "say", orig_say)
+        self.addCleanup(setattr, student_scraper, "sleep_interruptible",
+                        orig_sleep)
+        student_scraper.say = self.said.append
+
+        async def fake_sleep(seconds, check_stop=None, **_k):
+            if check_stop is not None:
+                check_stop()
+            self.slept.append(seconds)
+        student_scraper.sleep_interruptible = fake_sleep
 
     def cd(self):
         return student_scraper.RateLimitCooldown()
+
+    def workflow(self):
+        wf = student_scraper.Workflow.__new__(student_scraper.Workflow)
+        wf.context = self.ctx
+        wf.cooldown = student_scraper.RateLimitCooldown()
+        wf.options = type("O", (), {})()
+        wf.state = None
+        return wf
+
+    # THE WHOLE POINT, driven through the real code path: thirty rate limits
+    # in a row, each one answered with "wait a random MIN..MAX minutes, then
+    # retry the SAME search".  _cooldown_and_wait returning True is what
+    # makes the caller `continue` instead of raising Stopped, so thirty Trues
+    # is thirty retries and no stop.
+    def test_thirty_rate_limits_in_a_row_all_retry(self):
+        low, high = band()
+        wf = self.workflow()
+        for hit in range(1, 31):
+            limit = student_scraper.RateLimited("GitHub rate limit",
+                                               source="search")
+            kept_going = asyncio.run(wf._cooldown_and_wait(limit))
+            self.assertTrue(kept_going,
+                            "hit %d stopped the run; it must retry" % hit)
+            self.assertEqual(wf.cooldown.level, hit,
+                             "the level must still climb, for the log")
+            # one second of slack at the bottom: escalate() stores an
+            # absolute wake-up time and remaining() int()-truncates the
+            # fraction of a second that has passed since, so a 300s draw is
+            # slept as 299s.  That predates the random band and is harmless.
+            waited = self.slept[-1]
+            self.assertTrue(low - 1 <= waited <= high,
+                            "hit %d slept %ss, outside the %s..%ss band"
+                            % (hit, waited, low, high))
+        self.assertFalse(wf.cooldown.exhausted())
+        # and it really did re-draw rather than repeat one number
+        self.assertGreater(len(set(self.slept)), 1,
+                           "every cooldown was identical -- not random")
+
+    # a success in between wipes the escalation, so a run that recovers is
+    # not carrying thirty hits' worth of history into the next limit
+    def test_a_success_between_limits_resets_the_level(self):
+        wf = self.workflow()
+        for _ in range(3):
+            asyncio.run(wf._cooldown_and_wait(
+                student_scraper.RateLimited("rate limit", source="search")))
+        self.assertEqual(wf.cooldown.level, 3)
+        wf.cooldown.clear()
+        self.assertEqual(wf.cooldown.level, 0)
+        asyncio.run(wf._cooldown_and_wait(
+            student_scraper.RateLimited("rate limit", source="search")))
+        self.assertEqual(wf.cooldown.level, 1)
 
     def test_the_ladder_never_exhausts(self):
         c = self.cd()
@@ -179,13 +293,14 @@ class NeverStopOnRateLimitCase(unittest.TestCase):
             self.assertFalse(c.exhausted(),
                              "an unattended run must not stop itself")
 
-    def test_the_wait_clamps_at_the_top_of_the_ladder(self):
+    def test_the_wait_never_grows_past_the_band(self):
+        low, high = band()
         c = self.cd()
-        for _ in range(C.MAX_COOLDOWN_LEVEL + 6):
+        for hit in range(C.MAX_COOLDOWN_LEVEL + 20):
             c.escalate("search", "rate limit", now=at(0))
-        self.assertEqual(c.remaining(now=at(0)),
-                         C.COOLDOWN_MINUTES[-1] * 60,
-                         "the wait must not grow without bound either")
+            self.assertTrue(low <= c.remaining(now=at(0)) <= high,
+                            "hit %d escaped the band -- the wait must not "
+                            "grow without bound either" % (hit + 1))
 
     def test_a_success_still_resets_the_ladder(self):
         c = self.cd()
@@ -341,8 +456,9 @@ None, object(), say=lambda *_a: None)
         # naukri HX_JITTER_FRACTION / HX_CYCLE_COOLDOWN_MINUTES
         self.assertEqual(student_scraper.JITTER_FRACTION, 0.35)
         self.assertEqual(real("LAP_COOLDOWN_MINUTES"), 45)
-        # unchanged: this ladder is ours, measured against this workload
-        self.assertEqual(C.COOLDOWN_MINUTES, [1, 5, 15, 30])
+        # the rate-limit cooldown band, ours, drawn fresh on every hit
+        self.assertEqual((real("RATE_LIMIT_COOLDOWN_MIN"),
+                          real("RATE_LIMIT_COOLDOWN_MAX")), (5, 30))
         self.assertEqual(C.MAX_COOLDOWN_LEVEL, 4)
 
     # an empty search must still be the CHEAP one of the two
@@ -531,9 +647,10 @@ class OutageCase(unittest.TestCase):
         self.assertEqual(reloaded.kind, "outage")
         self.assertFalse(reloaded.exhausted())
 
-    def test_the_wait_stays_capped_at_the_top_of_the_ladder(self):
-        top = C.COOLDOWN_MINUTES[-1] * 60
-        self.assertEqual(cooldown_seconds(len(C.COOLDOWN_MINUTES) + 5), top)
+    def test_the_wait_stays_inside_the_band(self):
+        low, high = band()
+        for level in range(1, 40):
+            self.assertTrue(low <= cooldown_seconds(level) <= high)
 
     def test_cooldown_and_wait_keeps_retrying_an_outage(self):
         wf = self.workflow()
