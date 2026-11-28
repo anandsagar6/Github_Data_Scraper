@@ -130,6 +130,8 @@ LAP_COOLDOWN_MAX = 60
 LAP_COOLDOWN_MINUTES = random.randrange(LAP_COOLDOWN_MIN, LAP_COOLDOWN_MAX + 1)      # cooldown when the whole list has been walked
 RATE_LIMIT_COOLDOWN_MIN = 5     # a GitHub rate limit waits a fresh random
 RATE_LIMIT_COOLDOWN_MAX = 30    # MIN..MAX minutes, then retries -- never stops
+LOGIN_RECHECK_SECONDS = 60     # signed out mid-run: how often to
+                               # re-check for a re-login while paused
 
 # -- work / break: both drawn fresh every time, counting WORKING time only -
 WORK_PERIOD_MIN_HOURS = 2       # work this long...
@@ -12467,6 +12469,22 @@ def say(message=""):
     log.info(message.strip() or "-")
 
 
+def bell():
+    """Ring the terminal bell, when stdout is a real terminal.
+
+    An unattended run is watched by ear as much as by eye: the [LOGGED OUT]
+    and [LOGGED IN] banners carry a bell so a login change is noticed without
+    staring at the scrollback.  A no-op when stdout is a file or a pipe (a
+    stray 0x07 in a log is just noise), and never fatal.
+    """
+    try:
+        if sys.stdout.isatty():
+            sys.stdout.write("\a")
+            sys.stdout.flush()
+    except Exception:
+        pass
+
+
 def _request_stop(_signum, _frame):
     global STOP_REQUESTED
     if STOP_REQUESTED:
@@ -13350,6 +13368,137 @@ class Workflow:
             % (rank, recovered, remaining))
         return 0
 
+    # ----------------------------------------------------- login watch ---
+    @staticmethod
+    def _auth_sig():
+        """(mtime, size) of github_auth.json -- its change signature.
+
+        Both are compared, not just mtime: --login rewrites the cookie set, so
+        the size almost always moves too, which catches the case where a
+        coarse filesystem clock leaves two writes with an identical mtime.
+        (0.0, -1) when the file is absent.
+        """
+        try:
+            st = os.stat(C.AUTH_FILE)
+            return (st.st_mtime, st.st_size)
+        except OSError:
+            return (0.0, -1)
+
+    async def _confirm_logout(self, page, tries=3):
+        """(confirmed, login): True only after `tries` 'no login' readings.
+
+        github_login_name navigates to github.com and reads the user-login
+        meta tag, and a single network blip can return None on a session that
+        is perfectly fine.  Pausing the whole run on one flaky read would be
+        worse than the problem it solves, so a logout must be seen several
+        times in a row before it is believed.  Returns as soon as one reading
+        finds a login.
+        """
+        for attempt in range(1, tries + 1):
+            login = await self.browser.github_login_name(page)
+            if login:
+                return False, login           # still signed in
+            if attempt < tries:
+                await sleep_interruptible(3, check_stop)
+        return True, None                     # confirmed signed out
+
+    async def _reopen_after_login(self, page):
+        """Reopen Chromium after a re-login and return a live page.
+
+        The browser was released while waiting so --login could take the
+        profile lock; start() re-injects the fresh github_auth.json, and the
+        scraper/profile helpers are rebuilt against the new context exactly as
+        restart_browser() does.
+        """
+        await self.browser.start(with_extension=True)
+        self.scraper = InstantDataScraper(self.browser, self.state, say)
+        self.profiles = GitHubProfile(self.browser, say)
+        page = await self.browser.page()
+        await asyncio.sleep(1)
+        await self.browser.close_extra_pages(keep=(page,))
+        return page
+
+    async def ensure_logged_in(self, page):
+        """Pause the run while GitHub is logged out; auto-resume on re-login.
+
+        Returns a live, signed-in page.  Signed in, this is one cheap check
+        and an immediate return.  Signed out, the run stops touching GitHub,
+        rings the terminal bell, prints a loud [LOGGED OUT] banner, RELEASES
+        the browser so  python3 student_scraper.py --login  can use this
+        folder's Chromium profile, and then waits: every LOGIN_RECHECK_SECONDS
+        it watches for a fresh github_auth.json (what --login writes) and, when
+        one appears, reopens the browser and confirms the login.  No progress
+        is lost -- the search resumes from its saved row -- and the command is
+        never restarted by hand.
+        """
+        confirmed, login = await self._confirm_logout(page)
+        if not confirmed:
+            return page                        # signed in: the common path
+
+        bell()
+        say("")
+        say("=" * 60)
+        say("[LOGGED OUT] GitHub is no longer signed in on this device.")
+        say("The run is PAUSED -- nothing is collected while signed out, and")
+        say("no progress is lost.")
+        say("")
+        say("TO RESUME: in another terminal, in this folder, run")
+        say("    python3 student_scraper.py --login")
+        say("and sign in.  This run reopens and continues on its own within")
+        say("%d seconds of a successful login." % LOGIN_RECHECK_SECONDS)
+        say("=" * 60)
+        log.warning("GitHub logged out; run paused, waiting for re-login")
+
+        # Release the browser so --login can take the profile's SingletonLock.
+        # close() also writes the now-signed-out cookies to github_auth.json,
+        # so the baseline mtime is read AFTER close() -- otherwise that write
+        # would look like the re-login being waited for.
+        try:
+            await self.browser.close()
+        except Exception as exc:
+            log.warning("could not release the browser cleanly: %s", exc)
+        auth_sig = self._auth_sig()
+
+        # A pause is not working time, so it earns no work break.
+        work_clock_pause()
+        try:
+            while True:
+                check_stop()
+                await sleep_interruptible(LOGIN_RECHECK_SECONDS, check_stop)
+                sig = self._auth_sig()
+                if sig == auth_sig:
+                    say("[LOGGED OUT] still waiting for --login ...")
+                    continue
+                auth_sig = sig                # a fresh login was saved
+                try:
+                    page = await self._reopen_after_login(page)
+                except Exception as exc:
+                    # --login's browser may not have freed the lock yet; try
+                    # again on the next tick.
+                    say("[LOGGED OUT] login saved but the browser is busy; "
+                        "retrying ...")
+                    log.warning("reopen after login failed: %s", exc)
+                    try:
+                        await self.browser.close()
+                    except Exception:
+                        pass
+                    continue
+                login = await self.browser.github_login_name(page)
+                if login:
+                    bell()
+                    say("")
+                    say("[LOGGED IN] signed in as %s -- resuming." % login)
+                    log.warning("GitHub login restored (%s); resuming", login)
+                    return page
+                say("[LOGGED OUT] a login was saved but GitHub still shows "
+                    "signed out; waiting ...")
+                try:
+                    await self.browser.close()
+                except Exception:
+                    pass
+        finally:
+            work_clock_resume()
+
     # ------------------------------------------------------- search unit --
     async def do_search_unit(self, page, unit):
         page = await self.live_page(page)
@@ -13381,6 +13530,9 @@ class Workflow:
             if self.options.process_existing:
                 say("[SKIP] no downloaded XLSX for this keyword")
                 return
+            # Signed out mid-run?  Pause and auto-resume before we
+            # crawl -- scraping logged out only wastes the search.
+            page = await self.ensure_logged_in(page)
             status, rows = await self.collect(page, keyword, target)
 
             if status == CollectResult.FAILED:
